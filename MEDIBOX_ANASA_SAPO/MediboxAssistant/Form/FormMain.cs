@@ -113,19 +113,6 @@ namespace Medibox
             }
         }
 
-        private void btnDanhSachThietBi_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnDSUser_Click(object sender, EventArgs e)
-        {
-            using (FormViewUser form = new FormViewUser())
-            {
-                form.ShowDialog();
-            }
-        }
- 
         private void btnSanPhamWEB_Click(object sender, EventArgs e)
         {
             using (FormViewSanPhamWeb form = new FormViewSanPhamWeb())
@@ -135,5 +122,13 @@ namespace Medibox
         }
 
         #endregion
+
+        private void btnProducts_Click(object sender, EventArgs e)
+        {
+            using (FormViewProduct form = new FormViewProduct())
+            {
+                form.ShowDialog();
+            }
+        }
     }
 }

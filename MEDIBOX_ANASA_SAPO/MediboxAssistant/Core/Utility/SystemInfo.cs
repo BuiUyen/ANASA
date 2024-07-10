@@ -97,7 +97,7 @@ namespace Sanita.Utility
         }
 
 
-        public static Dictionary<String, Image> LIST_IMAGE = new Dictionary<string, Image>();
+        public static Dictionary<String, System.Drawing.Image> LIST_IMAGE = new Dictionary<string, System.Drawing.Image>();
 
         public static String FontName = "Tahoma";
         public static DatabaseUtility.DATABASE_TYPE DatabaseType = DatabaseUtility.DATABASE_TYPE.POSTGRESQL;

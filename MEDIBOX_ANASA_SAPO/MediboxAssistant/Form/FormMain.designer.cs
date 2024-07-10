@@ -43,11 +43,8 @@
             this.CurrentTimer = new System.Windows.Forms.Timer(this.components);
             this.NOW_Timer = new System.Windows.Forms.Timer(this.components);
             this.MainMenu = new DevComponents.DotNetBar.Bar();
-            this.btnCauHinh = new DevComponents.DotNetBar.ButtonItem();
-            this.btnDSUser = new DevComponents.DotNetBar.ButtonItem();
-            this.btnDSHome = new DevComponents.DotNetBar.ButtonItem();
-            this.btnDSRoom = new DevComponents.DotNetBar.ButtonItem();
-            this.btnDanhSachThietBi = new DevComponents.DotNetBar.ButtonItem();
+            this.btnOmniSapo = new DevComponents.DotNetBar.ButtonItem();
+            this.btnProducts = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
@@ -271,7 +268,7 @@
             this.MainMenu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenu.IsMaximized = false;
             this.MainMenu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnCauHinh,
+            this.btnOmniSapo,
             this.buttonItem5});
             this.MainMenu.ItemSpacing = 5;
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
@@ -285,37 +282,18 @@
             this.MainMenu.TabStop = false;
             this.MainMenu.WrapItemsDock = true;
             // 
-            // btnCauHinh
+            // btnOmniSapo
             // 
-            this.btnCauHinh.Name = "btnCauHinh";
-            this.btnCauHinh.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnDSUser,
-            this.btnDSHome,
-            this.btnDSRoom,
-            this.btnDanhSachThietBi});
-            this.btnCauHinh.Text = "CẤU HÌNH NHÀ THÔNG MINH";
+            this.btnOmniSapo.Name = "btnOmniSapo";
+            this.btnOmniSapo.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnProducts});
+            this.btnOmniSapo.Text = "GÓI OMNI SAPO ANASA";
             // 
-            // btnDSUser
+            // btnProducts
             // 
-            this.btnDSUser.Name = "btnDSUser";
-            this.btnDSUser.Text = "Danh Sách Người Dùng";
-            this.btnDSUser.Click += new System.EventHandler(this.btnDSUser_Click);
-            // 
-            // btnDSHome
-            // 
-            this.btnDSHome.Name = "btnDSHome";
-            this.btnDSHome.Text = "Danh Sách Nhà";
-            // 
-            // btnDSRoom
-            // 
-            this.btnDSRoom.Name = "btnDSRoom";
-            this.btnDSRoom.Text = "Danh Sách Phòng";
-            // 
-            // btnDanhSachThietBi
-            // 
-            this.btnDanhSachThietBi.Name = "btnDanhSachThietBi";
-            this.btnDanhSachThietBi.Text = "Danh Sách Thiết Bị";
-            this.btnDanhSachThietBi.Click += new System.EventHandler(this.btnDanhSachThietBi_Click);
+            this.btnProducts.Name = "btnProducts";
+            this.btnProducts.Text = "Danh Sách Sản Phẩm";
+            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
             // 
             // buttonItem5
             // 
@@ -409,11 +387,8 @@
         private DevComponents.DotNetBar.PanelEx panelEx9;
         private DevComponents.DotNetBar.LabelX labelX8;
         private System.Windows.Forms.LinkLabel txtLinkWeb;
-        private DevComponents.DotNetBar.ButtonItem btnDanhSachThietBi;
-        private DevComponents.DotNetBar.ButtonItem btnDSUser;
-        private DevComponents.DotNetBar.ButtonItem btnDSHome;
-        private DevComponents.DotNetBar.ButtonItem btnDSRoom;
-        private DevComponents.DotNetBar.ButtonItem btnCauHinh;
+        private DevComponents.DotNetBar.ButtonItem btnProducts;
+        private DevComponents.DotNetBar.ButtonItem btnOmniSapo;
         private DevComponents.DotNetBar.ButtonItem buttonItem5;
     }
 }

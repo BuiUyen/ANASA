@@ -36,6 +36,8 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -111,9 +113,8 @@
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.Compatibility" />
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Dll\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql">
       <HintPath>Dll\Npgsql.dll</HintPath>
@@ -138,8 +139,18 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Database\InventoryDB.cs" />
+    <Compile Include="Core\Database\PriceListDB.cs" />
+    <Compile Include="Core\Database\VariantPriceDB.cs" />
+    <Compile Include="Core\Database\ImageDB.cs" />
+    <Compile Include="Core\Database\OptionDB.cs" />
+    <Compile Include="Core\Database\VariantDB.cs" />
+    <Compile Include="Core\Database\ProductDB.cs" />
     <Compile Include="Core\Database\MediboxDatabaseUtility.cs" />
     <Compile Include="Core\Database\SanPhamWebDB.cs" />
     <Compile Include="Core\Database\SoftUpdateDB.cs" />
@@ -153,6 +164,13 @@
     <Compile Include="Core\Integration\Spotify\UtilitySpotify.cs" />
     <Compile Include="Core\Model\BaseModel.cs" />
     <Compile Include="Core\Model\DataTypeModel.cs" />
+    <Compile Include="Core\Model\Data\Option.cs" />
+    <Compile Include="Core\Model\Data\Inventory.cs" />
+    <Compile Include="Core\Model\Data\PriceList.cs" />
+    <Compile Include="Core\Model\Data\VariantPrice.cs" />
+    <Compile Include="Core\Model\Data\Image.cs" />
+    <Compile Include="Core\Model\Data\Variant.cs" />
+    <Compile Include="Core\Model\Data\Product.cs" />
     <Compile Include="Core\Model\Data\SanPhamWeb.cs" />
     <Compile Include="Core\Model\Data\SoftUpdate.cs" />
     <Compile Include="Core\Model\Data\User.cs" />
@@ -160,6 +178,13 @@
     <Compile Include="Core\Model\MediboxSetting.cs" />
     <Compile Include="Core\Model\MyVar.cs" />
     <Compile Include="Core\Model\UI\ThongTinDanhSachDevice.cs" />
+    <Compile Include="Core\Presenter\InventoryPresenter.cs" />
+    <Compile Include="Core\Presenter\PriceListPresenter.cs" />
+    <Compile Include="Core\Presenter\VariantPricePresenter.cs" />
+    <Compile Include="Core\Presenter\ImagePresenter.cs" />
+    <Compile Include="Core\Presenter\OptionPresenter.cs" />
+    <Compile Include="Core\Presenter\VariantPresenter.cs" />
+    <Compile Include="Core\Presenter\ProductPresenter.cs" />
     <Compile Include="Core\Presenter\SanPhamWebPresenter.cs" />
     <Compile Include="Core\Presenter\SoftUpdatePresenter.cs" />
     <Compile Include="Core\Presenter\UserPresenter.cs" />
@@ -386,6 +411,12 @@
     <Compile Include="Core\Utility\UtilityListView.cs" />
     <Compile Include="Core\Utility\UtilityUpdateTime.cs" />
     <Compile Include="Core\Utility\UtilityWeb.cs" />
+    <Compile Include="Form\Edit\FormEditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Edit\FormEditProduct.designer.cs">
+      <DependentUpon>FormEditProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Edit\FormEditSanPhamWeb.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -439,6 +470,12 @@
     </Compile>
     <Compile Include="Form\Select\FormSelectDevice.designer.cs">
       <DependentUpon>FormSelectDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\View\FormViewProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\View\FormViewProduct.designer.cs">
+      <DependentUpon>FormViewProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\View\FormViewSanPhamWeb.cs">
       <SubType>Form</SubType>
@@ -503,6 +540,9 @@
     <EmbeddedResource Include="Core\Utility\UI\SplashScreen\FormSplashScreen.resx">
       <DependentUpon>FormSplashScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Edit\FormEditProduct.resx">
+      <DependentUpon>FormEditProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Edit\FormEditSanPhamWeb.resx">
       <DependentUpon>FormEditSanPhamWeb.cs</DependentUpon>
     </EmbeddedResource>
@@ -523,6 +563,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Select\FormSelectDevice.resx">
       <DependentUpon>FormSelectDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\View\FormViewProduct.resx">
+      <DependentUpon>FormViewProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\View\FormViewSanPhamWeb.resx">
       <DependentUpon>FormViewSanPhamWeb.cs</DependentUpon>
