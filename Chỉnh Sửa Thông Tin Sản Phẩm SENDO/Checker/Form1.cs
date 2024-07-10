@@ -282,23 +282,8 @@ namespace Checker
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var driverService = ChromeDriverService.CreateDefaultService();
-            driverService.HideCommandPromptWindow = true;
-            var options = new ChromeOptions();
-            //options.AddArgument("--window-position=-32000,-32000"); //an chorme
-            //options.AddArgument("headless");
-
-            driver = new ChromeDriver(driverService, options);
-            driver.Navigate().GoToUrl("https://anasa.mysapogo.com/");
-            driver.FindElementById("username").SendKeys("0327006111");
-            driver.FindElementById("password").SendKeys("@Uyen23071998");
-            driver.FindElement(By.Name("password")).SendKeys(OpenQA.Selenium.Keys.Return);//Đăng nhập tài khoản
-            System.Threading.Thread.Sleep(10000);
-            ((IJavaScriptExecutor)driver).ExecuteScript("window.open();");
-            driver.SwitchTo().Window(driver.WindowHandles.Last());
-
-            //ChromeDriverService service = ChromeDriverService.CreateDefaultService();
-            //service.HideCommandPromptWindow = true;
+            Form2 f2 = new Form2();
+            f2.ShowDialog();
 
         }
     }
