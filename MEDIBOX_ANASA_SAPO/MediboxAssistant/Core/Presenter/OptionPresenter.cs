@@ -27,6 +27,12 @@ namespace Medibox.Presenter
         {
             return OptionDB.mInstance.GetOption(id);
         }
+
+        public static Option GetOptionbyID(int option_id)
+        {
+            return OptionDB.mInstance.GetOptionbyID(option_id);
+        }
+
         public static void UpdateOption(Option data)
         {
             OptionDB.mInstance.UpdateOption(null, null, data);

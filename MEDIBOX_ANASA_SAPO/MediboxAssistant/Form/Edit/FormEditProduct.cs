@@ -225,10 +225,11 @@ namespace Medibox
                 foreach(Product pro in _root.products)
                 {
                     Product _product = ProductPresenter.GetProductbyID(pro.id);
+                    pro.product_id = pro.id;
 
                     if (_product.id > 0)
-                    {
-                        pro.id = _product.id;
+                    {                        
+                        pro.id = _product.id;                        
                         ProductPresenter.UpdateProduct(pro);                        
                     }
                     else
@@ -239,7 +240,8 @@ namespace Medibox
 
                     foreach (Variant var in pro.variants)
                     {
-                        Variant _variant = VariantPresenter.GetVariantbyID(var.variant_id);
+                        Variant _variant = VariantPresenter.GetVariantbyID(var.id);
+                        var.variant_id = var.id;
 
                         if (_variant.id > 0)
                         {
@@ -248,10 +250,40 @@ namespace Medibox
                         }
                         else
                         {
-                            var.variant_id = var.id;
                             VariantPresenter.InsertVariant(var);
                         }
+
+
+
+
                     }
+
+
+                    foreach (Option opt in pro.options)
+                    {
+                        Option _option = OptionPresenter.GetOptionbyID(opt.id);
+                        opt.product_id = pro.product_id;
+                        opt.option_id = opt.id;
+
+                        string _stringvalues = "";
+                        foreach (string st in opt.values)
+                        {
+                            _stringvalues = _stringvalues + "\"" + st + "\",";
+                        }
+                        opt.stringvalues = _stringvalues;
+
+                        if (_option.id > 0)
+                        {
+                            opt.id = _option.id;
+                            OptionPresenter.UpdateOption(opt);
+                        }
+                        else
+                        {                                     
+                            OptionPresenter.InsertOption(opt);
+                        }
+                    }
+
+
 
 
                 }                

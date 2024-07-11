@@ -51,6 +51,17 @@ namespace Medibox.Database
             DataRow row = baseDAO.DoGetDataRow(sql.ToString());
             return (MakeOption(row));
         }
+
+        public Option GetOptionbyID(int option_id)
+        {
+            StringBuilder sql = new StringBuilder();
+            sql.Append(" SELECT * ");
+            sql.Append(" FROM tb_option ");
+            sql.Append(" WHERE option_id = " + option_id.Escape());
+            DataRow row = baseDAO.DoGetDataRow(sql.ToString());
+            return (MakeOption(row));
+        }
+
         public int UpdateOption(IDbConnection connection, IDbTransaction trans, Option data)
         {
             lock (lockObject)
@@ -64,7 +75,7 @@ namespace Medibox.Database
                 sql.Append(" UPDATE tb_Option ");
                 sql.Append("  SET  ");
                 sql.Append("     option_id = " + data.option_id.Escape()).Append(", ");
-                sql.Append("     tenant_id = " + data.tenant_id.Escape()).Append(", ");
+                sql.Append("     product_id = " + data.product_id.Escape()).Append(", ");
                 sql.Append("      name = " + data.name.Escape()).Append(", ");
                 sql.Append("     position = " + data.position.Escape()).Append(", ");
                 sql.Append("      stringvalues = " + data.stringvalues.Escape());
@@ -83,13 +94,13 @@ namespace Medibox.Database
                 StringBuilder sql = new StringBuilder();
                 sql.Append(" INSERT INTO tb_option (");
                 sql.Append("            option_id,");
-                sql.Append("            tenant_id,");
+                sql.Append("            product_id,");
                 sql.Append("            name,");
                 sql.Append("            position,");
                 sql.Append("            stringvalues)");
                 sql.Append("  VALUES( ");
                 sql.Append("          " + data.option_id.Escape()).Append(", ");
-                sql.Append("          " + data.tenant_id.Escape()).Append(", ");
+                sql.Append("          " + data.product_id.Escape()).Append(", ");
                 sql.Append("          " + data.name.Escape()).Append(", ");
                 sql.Append("          " + data.position.Escape()).Append(", ");
                 sql.Append("          " + data.stringvalues.Escape()).Append(") ");
