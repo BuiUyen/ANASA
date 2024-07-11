@@ -37,7 +37,7 @@ namespace Checker
         public class Product
         {
             public int id { get; set; } // id sản phẩm chính
-            public int tenant_id { get; set; } // id sản phẩm riêng
+            public int tenant_id { get; set; } // id shop
             public DateTime created_on { get; set; }
             public DateTime modified_on { get; set; }
             public string status { get; set; } // trạng thái sản phẩm
@@ -67,7 +67,7 @@ namespace Checker
         public class Variant
         {
             public int id { get; set; } // id phân loại            
-            public int tenant_id { get; set; } // id sản phẩm riêng
+            public int tenant_id { get; set; } // id shop
             public int location_id { get; set; } // id kho hàng
             public DateTime created_on { get; set; } // thời gian tạo
             public DateTime modified_on { get; set; } // thời gian chỉnh sửa
@@ -133,7 +133,7 @@ namespace Checker
         {
             public int id { get; set; }
             public int variant_id { get; set; } // id phân loại
-            public int tenant_id { get; set; } // id sản phẩm riêng
+            public int tenant_id { get; set; } // id shop
             public DateTime created_on { get; set; }
             public DateTime modified_on { get; set; }
             public string code { get; set; } // mã chính sách giá
@@ -168,7 +168,7 @@ namespace Checker
         public class Image // ảnh đại diện
         {
             public int id { get; set; }
-            public int tenant_id { get; set; } // id sản phẩm riêng
+            public int tenant_id { get; set; } // id shop
             public double size { get; set; }
             public DateTime created_on { get; set; }
             public DateTime modified_on { get; set; }
@@ -182,7 +182,7 @@ namespace Checker
         public class Option // tên phân loại
         {
             public int id { get; set; } // id mã phân loại
-            public int tenant_id { get; set; } // id sản phẩm riêng
+            public int tenant_id { get; set; } // id shop
             public string name { get; set; }// tên phân loại
             public int position { get; set; } // cấp độ phân loại
             public List<string> values { get; set; } // tổng hợp tên phân loại

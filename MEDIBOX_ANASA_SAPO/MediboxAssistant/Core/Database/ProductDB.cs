@@ -51,6 +51,17 @@ namespace Medibox.Database
             DataRow row = baseDAO.DoGetDataRow(sql.ToString());
             return (MakeProduct(row));
         }
+
+        public Product GetProductbyID(int product_id)
+        {
+            StringBuilder sql = new StringBuilder();
+            sql.Append(" SELECT * ");
+            sql.Append(" FROM tb_product ");
+            sql.Append(" WHERE product_id = " + product_id.Escape());
+            DataRow row = baseDAO.DoGetDataRow(sql.ToString());
+            return (MakeProduct(row));
+        }
+
         public int UpdateProduct(IDbConnection connection, IDbTransaction trans, Product data)
         {
             lock (lockObject)

@@ -27,6 +27,12 @@ namespace Medibox.Presenter
         {
             return ProductDB.mInstance.GetProduct(id);
         }
+
+        public static Product GetProductbyID(int product_id)
+        {
+            return ProductDB.mInstance.GetProductbyID(product_id);
+        }
+
         public static void UpdateProduct(Product data)
         {
             ProductDB.mInstance.UpdateProduct(null, null, data);

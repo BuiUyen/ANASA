@@ -1,0 +1,463 @@
+[55496] 09:38:19.230 E/NpgsqlBaseDao: ShowDatabase error !
+Npgsql.NpgsqlException:
+Failed to establish a connection to 'localhost'.
+   at Npgsql.NpgsqlClosedState.Open(NpgsqlConnector context)
+   at Npgsql.NpgsqlConnector.Open()
+   at Npgsql.NpgsqlConnectorPool.GetPooledConnector(NpgsqlConnection Connection)
+   at Npgsql.NpgsqlConnectorPool.RequestPooledConnectorInternal(NpgsqlConnection Connection)
+   at Npgsql.NpgsqlConnectorPool.RequestConnector(NpgsqlConnection Connection)
+   at Npgsql.NpgsqlConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.ShowDatabase(String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 789
+[55496] 09:38:24.232 D/NpgsqlDatabaseUtility: [SynchDatabase] Database = [anasa]
+[55496] 09:38:24.266 E/NpgsqlDatabaseUtility: [SynchDatabase] Alter table 'tb_user'
+[55496] 09:38:24.269 E/NpgsqlDatabaseUtility: [SynchDatabase] Alter table 'tb_device'
+[55496] 09:38:24.269 E/NpgsqlDatabaseUtility: [SynchDatabase] Alter table 'tb_sanphamweb'
+[55496] 09:38:24.270 E/NpgsqlDatabaseUtility: [SynchDatabase] Alter table 'tb_product'
+[55496] 09:38:24.270 E/NpgsqlDatabaseUtility: [SynchDatabase] Alter table 'tb_variant'
+[55496] 09:38:24.271 E/NpgsqlDatabaseUtility: [SynchDatabase] Alter table 'tb_option'
+[55496] 09:38:24.271 E/NpgsqlDatabaseUtility: [SynchDatabase] Alter table 'tb_image'
+[55496] 09:38:24.272 E/NpgsqlDatabaseUtility: [SynchDatabase] Alter table 'tb_variantprice'
+[55496] 09:38:24.272 E/NpgsqlDatabaseUtility: [SynchDatabase] Alter table 'tb_pricelist'
+[55496] 09:38:24.273 E/NpgsqlDatabaseUtility: [SynchDatabase] Alter table 'tb_inventory'
+[55496] 09:38:27.723 D/UtilityCache: Start database cache...
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  SELECT SoftUpdateID,SoftUpdateVersion,SoftUpdateSQL  FROM tb_softupdate order by SoftUpdateID desc;
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+relation "tb_softupdate" does not exist
+Severity: ERROR
+Code: 42P01
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  SELECT SoftUpdateID,SoftUpdateVersion,SoftUpdateSQL  FROM tb_softupdate order by SoftUpdateID desc;
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  SELECT SoftUpdateID,SoftUpdateVersion,SoftUpdateSQL  FROM tb_softupdate order by SoftUpdateID desc;
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  SELECT SoftUpdateID,SoftUpdateVersion,SoftUpdateSQL  FROM tb_softupdate order by SoftUpdateID desc;
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  SELECT SoftUpdateID,SoftUpdateVersion,SoftUpdateSQL  FROM tb_softupdate order by SoftUpdateID desc;
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  SELECT SoftUpdateID,SoftUpdateVersion,SoftUpdateSQL  FROM tb_softupdate order by SoftUpdateID desc;
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  SELECT SoftUpdateID,SoftUpdateVersion,SoftUpdateSQL  FROM tb_softupdate order by SoftUpdateID desc;
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 2 error ! TryMax > 5
+[55496] 09:38:27.000 D/NpgsqlDatabaseUtility: [SynchDatabase] Database = [anasa]
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  select * from information_schema.columns where table_schema = 'public' 
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  select * from information_schema.columns where table_schema = 'public' 
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  select * from information_schema.columns where table_schema = 'public' 
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  select * from information_schema.columns where table_schema = 'public' 
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  select * from information_schema.columns where table_schema = 'public' 
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  select * from information_schema.columns where table_schema = 'public' 
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  select * from information_schema.columns where table_schema = 'public' 
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 2 error ! TryMax > 5
+[55496] 09:38:27.000 E/NpgsqlBaseDao: SELECT idx.indrelid :: REGCLASS AS table_name, i.relname AS index_name FROM pg_index AS idx JOIN pg_class AS i ON i.oid = idx.indexrelid JOIN pg_am AS am ON i.relam = am.oid JOIN pg_namespace AS NS ON i.relnamespace = NS.OID JOIN pg_user AS U ON i.relowner = U.usesysid WHERE NOT nspname LIKE 'pg%' and idx.indisunique != 't' and idx.indisprimary != 't';
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao: SELECT idx.indrelid :: REGCLASS AS table_name, i.relname AS index_name FROM pg_index AS idx JOIN pg_class AS i ON i.oid = idx.indexrelid JOIN pg_am AS am ON i.relam = am.oid JOIN pg_namespace AS NS ON i.relnamespace = NS.OID JOIN pg_user AS U ON i.relowner = U.usesysid WHERE NOT nspname LIKE 'pg%' and idx.indisunique != 't' and idx.indisprimary != 't';
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao: SELECT idx.indrelid :: REGCLASS AS table_name, i.relname AS index_name FROM pg_index AS idx JOIN pg_class AS i ON i.oid = idx.indexrelid JOIN pg_am AS am ON i.relam = am.oid JOIN pg_namespace AS NS ON i.relnamespace = NS.OID JOIN pg_user AS U ON i.relowner = U.usesysid WHERE NOT nspname LIKE 'pg%' and idx.indisunique != 't' and idx.indisprimary != 't';
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao: SELECT idx.indrelid :: REGCLASS AS table_name, i.relname AS index_name FROM pg_index AS idx JOIN pg_class AS i ON i.oid = idx.indexrelid JOIN pg_am AS am ON i.relam = am.oid JOIN pg_namespace AS NS ON i.relnamespace = NS.OID JOIN pg_user AS U ON i.relowner = U.usesysid WHERE NOT nspname LIKE 'pg%' and idx.indisunique != 't' and idx.indisprimary != 't';
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao: SELECT idx.indrelid :: REGCLASS AS table_name, i.relname AS index_name FROM pg_index AS idx JOIN pg_class AS i ON i.oid = idx.indexrelid JOIN pg_am AS am ON i.relam = am.oid JOIN pg_namespace AS NS ON i.relnamespace = NS.OID JOIN pg_user AS U ON i.relowner = U.usesysid WHERE NOT nspname LIKE 'pg%' and idx.indisunique != 't' and idx.indisprimary != 't';
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao: SELECT idx.indrelid :: REGCLASS AS table_name, i.relname AS index_name FROM pg_index AS idx JOIN pg_class AS i ON i.oid = idx.indexrelid JOIN pg_am AS am ON i.relam = am.oid JOIN pg_namespace AS NS ON i.relnamespace = NS.OID JOIN pg_user AS U ON i.relowner = U.usesysid WHERE NOT nspname LIKE 'pg%' and idx.indisunique != 't' and idx.indisprimary != 't';
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao: SELECT idx.indrelid :: REGCLASS AS table_name, i.relname AS index_name FROM pg_index AS idx JOIN pg_class AS i ON i.oid = idx.indexrelid JOIN pg_am AS am ON i.relam = am.oid JOIN pg_namespace AS NS ON i.relnamespace = NS.OID JOIN pg_user AS U ON i.relowner = U.usesysid WHERE NOT nspname LIKE 'pg%' and idx.indisunique != 't' and idx.indisprimary != 't';
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 2 error ! TryMax > 5
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  select * from information_schema.tables where table_schema = 'public'  
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  select * from information_schema.tables where table_schema = 'public'  
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  select * from information_schema.tables where table_schema = 'public'  
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  select * from information_schema.tables where table_schema = 'public'  
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  select * from information_schema.tables where table_schema = 'public'  
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  select * from information_schema.tables where table_schema = 'public'  
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 1 error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.GetDataTable(IDbConnection connection, IDbTransaction trans, String sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1744
+[55496] 09:38:27.000 E/NpgsqlBaseDao:  select * from information_schema.tables where table_schema = 'public'  
+[55496] 09:38:27.000 E/NpgsqlBaseDao: GetDataTable 2 error ! TryMax > 5
+[55496] 09:38:27.000 D/NpgsqlDatabaseUtility: [SynchDatabase] Create table 'tb_user'
+[55496] 09:38:27.000 E/NpgsqlBaseDao: Update(' CREATE TABLE tb_user (   UserID  serial  PRIMARY KEY  ,  UserCode  text  ,  UserName  text  ,  UserPassword  text  ,  APIKey  text  ,  LocaltionName  text  ,  Latitude  text  ,  Longitude  text  ,  HassIO_URL  text  ,  HassIO_KEY  text  ,  Version  TIMESTAMP  ) WITH OIDS ;  ') error !
+Npgsql.NpgsqlException:
+current transaction is aborted, commands ignored until end of transaction block
+Severity: ERROR
+Code: 25P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext()
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject()
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   at Npgsql.ForwardsOnlyDataReader.NextResult()
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError)
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at Sanita.Utility.Database.BaseDao.NpgsqlBaseDao.Update(IDbConnection connection, IDbTransaction trans, String _sql) in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Utility\Database\BaseDao\NpgsqlBaseDao.cs:line 1041
+[55496] 09:38:27.000 E/NpgsqlBaseDao: =>Do rollback: --START
+[55496] 09:38:27.000 E/NpgsqlBaseDao: =>Do rollback OK
+[55496] 09:38:27.000 E/NpgsqlBaseDao: =>Do close connection OK
+[55496] 09:38:27.000 E/NpgsqlBaseDao: =>Do rollback: --END
+[55496] 09:38:27.000 E/NpgsqlDatabaseUtility: [SynchDatabase] Create table lỗi
+[55496] 09:38:27.000 D/UtilityCache: End database cache...
+[55496] 09:38:27.000 E/UtilityUpdateTime: Start get timer...

@@ -51,6 +51,17 @@ namespace Medibox.Database
             DataRow row = baseDAO.DoGetDataRow(sql.ToString());
             return (MakeVariant(row));
         }
+
+        public Variant GetVariantbyID(int variant_id)
+        {
+            StringBuilder sql = new StringBuilder();
+            sql.Append(" SELECT * ");
+            sql.Append(" FROM tb_variant ");
+            sql.Append(" WHERE variant_id = " + variant_id.Escape());
+            DataRow row = baseDAO.DoGetDataRow(sql.ToString());
+            return (MakeVariant(row));
+        }
+
         public int UpdateVariant(IDbConnection connection, IDbTransaction trans, Variant data)
         {
             lock (lockObject)

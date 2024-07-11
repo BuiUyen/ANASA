@@ -91,14 +91,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MediboxAssistant.exe" size="2044416">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MediboxAssistant.exe" size="2041856">
       <assemblyIdentity name="MediboxAssistant" version="1.0.0.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uj/cYJMRwWJI2Cx9e2VQ4BxDZmm8mPa5nAKOJoA+Z4g=</dsig:DigestValue>
+        <dsig:DigestValue>9vXdUmVq+Zod/Hxld6usYTuKWiTQH4jqeah4F1Z4egc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

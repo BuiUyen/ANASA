@@ -44,10 +44,6 @@ namespace Medibox
         private ExBackgroundWorker mThread;
         private IList<Device> mListDevice = new List<Device>();
 
-        private AutocompleteMenu mAutoMennu_User = new AutocompleteMenu();
-        private AutocompleteMenu mAutoMennu_Home = new AutocompleteMenu();
-        private AutocompleteMenu mAutoMennu_Room = new AutocompleteMenu();
-
         private enum ProcessingType
         {
             SaveData,
@@ -67,13 +63,6 @@ namespace Medibox
             mThread.ProgressChanged += new ProgressChangedEventHandler(bwAsync_WorkerChanged);
             mThread.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bwAsync_WorkerCompleted);
             mThread.DoWork += new DoWorkEventHandler(bwAsync_Worker);
-
-            //mDevice = _mDevice ?? new Device();
-            //mListDevice = _mListDevice;
-
-            //txtDeviceCode.Text = mDevice.DeviceCode;
-            //txtDeviceName.Text = mDevice.DeviceName;
-            //txtTenRutGon.Text = mDevice.DeviceName_Short;
 
         }
 
@@ -176,23 +165,7 @@ namespace Medibox
 
         private void Database_Load(object sender, EventArgs e)
         {
-            mAutoMennu_User.SetAutocompleteItems(MyVar.mListUser.Select(p => new AutoData(p.UserName, p.UserID.ToString())).ToList());
-            mAutoMennu_User.ComboboxMode = true;
-            mAutoMennu_User.MaximumSize = new System.Drawing.Size(txtUser.Width - 4, 300);
-            mAutoMennu_User.SetAutocompleteMenu(txtUser);
-            txtUser.KeyDown += Control_KeyDown;
 
-            //mAutoMennu_Home.SetAutocompleteItems(MyVar.mListHome.Select(p => new AutoData(p.HomeName, p.HomeID.ToString())).ToList());
-            mAutoMennu_Home.ComboboxMode = true;
-            mAutoMennu_Home.MaximumSize = new System.Drawing.Size(txtHome.Width - 4, 300);
-            mAutoMennu_Home.SetAutocompleteMenu(txtHome);
-            txtHome.KeyDown += Control_KeyDown;
-
-            //mAutoMennu_Room.SetAutocompleteItems(MyVar.mListRoom.Select(p => new AutoData(p.RoomName, p.RoomID.ToString())).ToList());
-            mAutoMennu_Room.ComboboxMode = true;
-            mAutoMennu_Room.MaximumSize = new System.Drawing.Size(txtRoom.Width - 4, 300);
-            mAutoMennu_Room.SetAutocompleteMenu(txtRoom);
-            txtRoom.KeyDown += Control_KeyDown;
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -203,19 +176,12 @@ namespace Medibox
         private void btnSave_Click(object sender, EventArgs e)
         {
             //Validate
-            if (String.IsNullOrEmpty(txtDeviceCode.Text.Trim()))
-            {
-                SanitaMessageBox.Show("Chưa nhập code !", "Thông Báo".Translate());
-                txtDeviceCode.Focus();
-                return;
-            }
-
-            //mDevice.DeviceCode = txtDeviceCode.Text;
-            //mDevice.DeviceName = txtDeviceName.Text;
-            //mDevice.DeviceName_Short = txtTenRutGon.Text;
-            ////mDevice.HomeID = Home.GetID(txtHome.Text.Trim());
-            ////mDevice.RoomID = Room.GetID(txtRoom.Text.Trim());
-            //mDevice.UserID = User.GetID(txtUser.Text.Trim());
+            //if (String.IsNullOrEmpty(txtDeviceCode.Text.Trim()))
+            //{
+            //    SanitaMessageBox.Show("Chưa nhập code !", "Thông Báo".Translate());
+            //    txtDeviceCode.Focus();
+            //    return;
+            //}            
 
             bwAsync_Start(ProcessingType.SaveData);
         }
@@ -226,22 +192,7 @@ namespace Medibox
             {
                 SendKeys.SendWait("{TAB}");
             }
-        }
-
-        private void txtHome_ButtonCustomClick(object sender, EventArgs e)
-        {
-            mAutoMennu_Home.Show(txtHome, true, true);
-        }
-
-        private void txtRoom_ButtonCustomClick(object sender, EventArgs e)
-        {
-            mAutoMennu_Room.Show(txtRoom, true, true);
-        }
-
-        private void txtUser_ButtonCustomClick(object sender, EventArgs e)
-        {
-            mAutoMennu_User.Show(txtUser, true, true);
-        }
+        }        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -260,24 +211,50 @@ namespace Medibox
             ((IJavaScriptExecutor)driver).ExecuteScript("window.open();");
             driver.SwitchTo().Window(driver.WindowHandles.Last());
 
-            for (int i = 0;  i < 163; i++)
+            for (int i = 0;  i < 500; i++)
             {
                 driver.Navigate().GoToUrl("https://anasa.mysapogo.com/admin/products.json?page="+ i.ToString());
                 var todo = driver.FindElement(By.TagName("Body")).Text;
                 Root _root = JsonConvert.DeserializeObject<Root>(todo);
 
+                if (_root.products.Count == 0)
+                {
+                    break;
+                }
+
                 foreach(Product pro in _root.products)
                 {
-                    if (pro.id > 0)
+                    Product _product = ProductPresenter.GetProductbyID(pro.id);
+
+                    if (_product.id > 0)
+                    {
+                        pro.id = _product.id;
+                        ProductPresenter.UpdateProduct(pro);                        
+                    }
+                    else
                     {
                         pro.product_id = pro.id;
                         ProductPresenter.InsertProduct(pro);
                     }
-                    else
+
+                    foreach (Variant var in pro.variants)
                     {
-                       
-                    }                    
-                }
+                        Variant _variant = VariantPresenter.GetVariantbyID(var.variant_id);
+
+                        if (_variant.id > 0)
+                        {
+                            var.id = _variant.id;
+                            VariantPresenter.UpdateVariant(var);                            
+                        }
+                        else
+                        {
+                            var.variant_id = var.id;
+                            VariantPresenter.InsertVariant(var);
+                        }
+                    }
+
+
+                }                
             }
             
                                     
