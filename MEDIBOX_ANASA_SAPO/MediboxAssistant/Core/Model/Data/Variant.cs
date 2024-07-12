@@ -22,7 +22,7 @@ namespace Medibox.Model
         public string variant_retail_price { get; set; }
         public string variant_whole_price { get; set; }
         public string variant_import_price { get; set; }
-        public string image_id { get; set; }
+        public string image_id { get; set; } //id ảnh đại diện
         public string description { get; set; }
         public string name { get; set; }
         public string opt1 { get; set; }

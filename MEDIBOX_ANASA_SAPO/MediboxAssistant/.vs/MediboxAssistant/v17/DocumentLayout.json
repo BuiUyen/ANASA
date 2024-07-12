@@ -1,0 +1,448 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|d:\\visual code\\buiuyen\\anasa\\medibox_anasa_sapo\\mediboxassistant\\form\\edit\\formeditproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:form\\edit\\formeditproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\form\\edit\\formeditproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:form\\edit\\formeditproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\core\\presenter\\pricelistpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:core\\presenter\\pricelistpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\core\\database\\productdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:core\\database\\productdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\form\\view\\formviewproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:form\\view\\formviewproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\core\\model\\data\\variantprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:core\\model\\data\\variantprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\core\\database\\mediboxdatabaseutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:core\\database\\mediboxdatabaseutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\core\\model\\data\\pricelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:core\\model\\data\\pricelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\core\\database\\variantpricedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:core\\database\\variantpricedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\core\\model\\data\\variant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:core\\model\\data\\variant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\core\\database\\variantdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:core\\database\\variantdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\core\\database\\pricelistdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:core\\database\\pricelistdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\core\\model\\data\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:core\\model\\data\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\core\\presenter\\imagepresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:core\\presenter\\imagepresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\core\\model\\data\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:core\\model\\data\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\form\\edit\\formeditdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:form\\edit\\formeditdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\core\\presenter\\devicepresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:core\\presenter\\devicepresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\form\\edit\\formeditdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:form\\edit\\formeditdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\core\\database\\inventorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:core\\database\\inventorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\core\\model\\data\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:core\\model\\data\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\form\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:form\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\form\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:form\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\form\\view\\formviewproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:form\\view\\formviewproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\core\\presenter\\inventorypresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:core\\presenter\\inventorypresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\form\\view\\formviewsanphamweb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAnasaSapo.csproj|solutionrelative:form\\view\\formviewsanphamweb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAssistant.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\form\\view\\formviewsanphamweb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAssistant.csproj|solutionrelative:form\\view\\formviewsanphamweb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAssistant.csproj|D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\core\\model\\data\\sanphamweb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A47CF77-8CAF-4EDD-8BE5-E118FC39C0CD}|MediboxAssistant.csproj|solutionrelative:core\\model\\data\\sanphamweb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductDB.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Database\\ProductDB.cs",
+              "RelativeDocumentMoniker": "Core\\Database\\ProductDB.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Database\\ProductDB.cs",
+              "RelativeToolTip": "Core\\Database\\ProductDB.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAgwCAAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:03:19.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VariantPriceDB.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Database\\VariantPriceDB.cs",
+              "RelativeDocumentMoniker": "Core\\Database\\VariantPriceDB.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Database\\VariantPriceDB.cs",
+              "RelativeToolTip": "Core\\Database\\VariantPriceDB.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T18:21:41.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Image.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Model\\Data\\Image.cs",
+              "RelativeDocumentMoniker": "Core\\Model\\Data\\Image.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Model\\Data\\Image.cs",
+              "RelativeToolTip": "Core\\Model\\Data\\Image.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:03:19.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "VariantDB.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Database\\VariantDB.cs",
+              "RelativeDocumentMoniker": "Core\\Database\\VariantDB.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Database\\VariantDB.cs",
+              "RelativeToolTip": "Core\\Database\\VariantDB.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAowDAAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:03:19.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormEditProduct.cs [Design]",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\Edit\\FormEditProduct.cs",
+              "RelativeDocumentMoniker": "Form\\Edit\\FormEditProduct.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\Edit\\FormEditProduct.cs [Design]",
+              "RelativeToolTip": "Form\\Edit\\FormEditProduct.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:03:19.065Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VariantPrice.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Model\\Data\\VariantPrice.cs",
+              "RelativeDocumentMoniker": "Core\\Model\\Data\\VariantPrice.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Model\\Data\\VariantPrice.cs",
+              "RelativeToolTip": "Core\\Model\\Data\\VariantPrice.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:31:46.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormEditProduct.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\Edit\\FormEditProduct.cs",
+              "RelativeDocumentMoniker": "Form\\Edit\\FormEditProduct.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\Edit\\FormEditProduct.cs",
+              "RelativeToolTip": "Form\\Edit\\FormEditProduct.cs",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAowIQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:03:19.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PriceListPresenter.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Presenter\\PriceListPresenter.cs",
+              "RelativeDocumentMoniker": "Core\\Presenter\\PriceListPresenter.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Presenter\\PriceListPresenter.cs",
+              "RelativeToolTip": "Core\\Presenter\\PriceListPresenter.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAywBwAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:03:19.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PriceListDB.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Database\\PriceListDB.cs",
+              "RelativeDocumentMoniker": "Core\\Database\\PriceListDB.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Database\\PriceListDB.cs",
+              "RelativeToolTip": "Core\\Database\\PriceListDB.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAewEwAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:52:57.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormViewProduct.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\View\\FormViewProduct.cs",
+              "RelativeDocumentMoniker": "Form\\View\\FormViewProduct.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\View\\FormViewProduct.cs",
+              "RelativeToolTip": "Form\\View\\FormViewProduct.cs",
+              "ViewState": "AQIAAJYAAAAAAAAAAAAjwKcAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:03:19.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MediboxDatabaseUtility.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Database\\MediboxDatabaseUtility.cs",
+              "RelativeDocumentMoniker": "Core\\Database\\MediboxDatabaseUtility.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Database\\MediboxDatabaseUtility.cs",
+              "RelativeToolTip": "Core\\Database\\MediboxDatabaseUtility.cs",
+              "ViewState": "AQIAAAUEAAAAAAAAAAAcwBgFAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T18:13:43.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PriceList.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Model\\Data\\PriceList.cs",
+              "RelativeDocumentMoniker": "Core\\Model\\Data\\PriceList.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Model\\Data\\PriceList.cs",
+              "RelativeToolTip": "Core\\Model\\Data\\PriceList.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:03:19.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Variant.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Model\\Data\\Variant.cs",
+              "RelativeDocumentMoniker": "Core\\Model\\Data\\Variant.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Model\\Data\\Variant.cs",
+              "RelativeToolTip": "Core\\Model\\Data\\Variant.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:03:19.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ImagePresenter.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Presenter\\ImagePresenter.cs",
+              "RelativeDocumentMoniker": "Core\\Presenter\\ImagePresenter.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Presenter\\ImagePresenter.cs",
+              "RelativeToolTip": "Core\\Presenter\\ImagePresenter.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowCoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:03:19.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Model\\Data\\Product.cs",
+              "RelativeDocumentMoniker": "Core\\Model\\Data\\Product.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Model\\Data\\Product.cs",
+              "RelativeToolTip": "Core\\Model\\Data\\Product.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAiwAoAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:03:19.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormEditDevice.cs [Design]",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\Edit\\FormEditDevice.cs",
+              "RelativeDocumentMoniker": "Form\\Edit\\FormEditDevice.cs",
+              "ToolTip": "C:\\Users\\huuuy\\Desktop\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\Edit\\FormEditDevice.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-07-11T17:03:19.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DevicePresenter.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Presenter\\DevicePresenter.cs",
+              "RelativeDocumentMoniker": "Core\\Presenter\\DevicePresenter.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Presenter\\DevicePresenter.cs",
+              "RelativeToolTip": "Core\\Presenter\\DevicePresenter.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAACkAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:03:19.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FormEditDevice.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\Edit\\FormEditDevice.cs",
+              "RelativeDocumentMoniker": "Form\\Edit\\FormEditDevice.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\Edit\\FormEditDevice.cs",
+              "RelativeToolTip": "Form\\Edit\\FormEditDevice.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwDgAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-07-11T17:03:19.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Model\\Data\\Inventory.cs",
+              "RelativeDocumentMoniker": "Core\\Model\\Data\\Inventory.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Model\\Data\\Inventory.cs",
+              "RelativeToolTip": "Core\\Model\\Data\\Inventory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:03:19.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "InventoryDB.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Database\\InventoryDB.cs",
+              "RelativeDocumentMoniker": "Core\\Database\\InventoryDB.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Database\\InventoryDB.cs",
+              "RelativeToolTip": "Core\\Database\\InventoryDB.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAUwFQAAABiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:03:19.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FormMain.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\FormMain.cs",
+              "RelativeDocumentMoniker": "Form\\FormMain.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\FormMain.cs",
+              "RelativeToolTip": "Form\\FormMain.cs",
+              "ViewState": "AQIAAFkAAAAAAAAAAAA3wIUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-07-11T17:03:19.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "FormMain.cs [Design]",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\FormMain.cs",
+              "RelativeDocumentMoniker": "Form\\FormMain.cs",
+              "ToolTip": "C:\\Users\\huuuy\\Desktop\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\FormMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-07-11T17:03:19.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "InventoryPresenter.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Presenter\\InventoryPresenter.cs",
+              "RelativeDocumentMoniker": "Core\\Presenter\\InventoryPresenter.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Presenter\\InventoryPresenter.cs",
+              "RelativeToolTip": "Core\\Presenter\\InventoryPresenter.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:03:19.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FormViewProduct.cs [Design]",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\View\\FormViewProduct.cs",
+              "RelativeDocumentMoniker": "Form\\View\\FormViewProduct.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\View\\FormViewProduct.cs [Design]",
+              "RelativeToolTip": "Form\\View\\FormViewProduct.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:03:19.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FormViewSanPhamWeb.cs [Design]",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\View\\FormViewSanPhamWeb.cs",
+              "RelativeDocumentMoniker": "Form\\View\\FormViewSanPhamWeb.cs",
+              "ToolTip": "C:\\Users\\huuuy\\Desktop\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\View\\FormViewSanPhamWeb.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-07-11T17:03:19.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SanPhamWeb.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Model\\Data\\SanPhamWeb.cs",
+              "RelativeDocumentMoniker": "Core\\Model\\Data\\SanPhamWeb.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Core\\Model\\Data\\SanPhamWeb.cs",
+              "RelativeToolTip": "Core\\Model\\Data\\SanPhamWeb.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-11T17:03:19.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FormViewSanPhamWeb.cs [Design]",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\ANASA\\MEDIBOX_ANASA_SAPO\\MediboxAssistant\\Form\\View\\FormViewSanPhamWeb.cs",
+              "RelativeDocumentMoniker": "Form\\View\\FormViewSanPhamWeb.cs",
+              "ToolTip": "C:\\Users\\huuuy\\Desktop\\GITHUB\\MEDIBOX\\MediboxAssistant\\Form\\View\\FormViewSanPhamWeb.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-07-11T17:03:19.341Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

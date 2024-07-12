@@ -5,7 +5,7 @@ using System.Linq;
 namespace Medibox.Model
 {
     [Serializable()]
-    public class PriceList
+    public class PriceList // tên chính sách giá
     {
         public int id { get; set; }
         public int pricelist_id { get; set; }

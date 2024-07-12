@@ -28,6 +28,12 @@ namespace Medibox.Presenter
         {
             return PriceListDB.mInstance.GetPriceList(id);
         }
+
+        public static PriceList GetPriceListbyID(int pricelist_id)
+        {
+            return PriceListDB.mInstance.GetPriceListbyID(pricelist_id);
+        }
+
         public static void UpdatePriceList(PriceList data)
         {
             PriceListDB.mInstance.UpdatePriceList(null, null, data);

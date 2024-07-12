@@ -6,7 +6,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace Medibox.Model
 {
     [Serializable()]
-    public class VariantPrice
+    public class VariantPrice // chính sách giá
     {
         public int id { get; set; }
         public int variantprice_id { get; set; }

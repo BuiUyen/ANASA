@@ -28,6 +28,12 @@ namespace Medibox.Presenter
         {
             return VariantPriceDB.mInstance.GetVariantPrice(id);
         }
+
+        public static VariantPrice GetVariantPricebyID(int variantprice_id)
+        {
+            return VariantPriceDB.mInstance.GetVariantPricebyID(variantprice_id);
+        }
+
         public static void UpdateVariantPrice(VariantPrice data)
         {
             VariantPriceDB.mInstance.UpdateVariantPrice(null, null, data);

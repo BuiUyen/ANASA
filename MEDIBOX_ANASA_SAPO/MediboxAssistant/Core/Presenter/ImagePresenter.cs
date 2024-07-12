@@ -27,6 +27,12 @@ namespace Medibox.Presenter
         {
             return ImageDB.mInstance.GetImage(id);
         }
+
+        public static Image GetImagebyID(int image_id)
+        {
+            return ImageDB.mInstance.GetImagebyID(image_id);
+        }
+
         public static void UpdateImage(Image data)
         {
             ImageDB.mInstance.UpdateImage(null, null, data);

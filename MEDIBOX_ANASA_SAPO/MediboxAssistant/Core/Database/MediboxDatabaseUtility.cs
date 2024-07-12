@@ -1046,6 +1046,15 @@ namespace Medibox.Database
                     Column.isPRIMARY = false;
                     listColumn.Add(Column);
                 }
+
+                {
+                    ClassColumn Column = new ClassColumn();
+                    Column.ColumnName = "product_id";
+                    Column.ColumnDefine = " int(10) DEFAULT '0' ";
+                    Column.isPRIMARY = false;
+                    listColumn.Add(Column);
+                }
+
                 {
                     ClassColumn Column = new ClassColumn();
                     Column.ColumnName = "tenant_id";

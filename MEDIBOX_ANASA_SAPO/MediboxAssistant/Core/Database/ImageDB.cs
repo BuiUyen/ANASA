@@ -51,6 +51,17 @@ namespace Medibox.Database
             DataRow row = baseDAO.DoGetDataRow(sql.ToString());
             return (MakeImage(row));
         }
+
+        public Image GetImagebyID(int image_id)
+        {
+            StringBuilder sql = new StringBuilder();
+            sql.Append(" SELECT * ");
+            sql.Append(" FROM tb_image ");
+            sql.Append(" WHERE image_id = " + image_id.Escape());
+            DataRow row = baseDAO.DoGetDataRow(sql.ToString());
+            return (MakeImage(row));
+        }
+
         public int UpdateImage(IDbConnection connection, IDbTransaction trans, Image data)
         {
             lock (lockObject)
@@ -64,6 +75,7 @@ namespace Medibox.Database
                 sql.Append(" UPDATE tb_Image ");
                 sql.Append("  SET  ");
                 sql.Append("     image_id = " + data.image_id.Escape()).Append(", ");
+                sql.Append("     product_id = " + data.product_id.Escape()).Append(", ");
                 sql.Append("     tenant_id = " + data.tenant_id.Escape()).Append(", ");
                 sql.Append("      size = " + data.size.Escape()).Append(", ");
                 sql.Append("      created_on = " + data.created_on.Escape()).Append(", ");
@@ -88,6 +100,7 @@ namespace Medibox.Database
                 StringBuilder sql = new StringBuilder();
                 sql.Append(" INSERT INTO tb_image (");
                 sql.Append("            image_id,");
+                sql.Append("            product_id,");
                 sql.Append("            tenant_id,");
                 sql.Append("            size,");
                 sql.Append("            created_on,");
@@ -99,6 +112,7 @@ namespace Medibox.Database
                 sql.Append("            position)");
                 sql.Append("  VALUES( ");
                 sql.Append("          " + data.image_id.Escape()).Append(", ");
+                sql.Append("          " + data.product_id.Escape()).Append(", ");
                 sql.Append("          " + data.tenant_id.Escape()).Append(", ");
                 sql.Append("          " + data.size.Escape()).Append(", ");
                 sql.Append("          " + data.created_on.Escape()).Append(", ");

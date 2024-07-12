@@ -9,6 +9,7 @@ namespace Medibox.Model
     {
         public int id { get; set; }
         public int image_id { get; set; }
+        public int product_id { get; set; }
         public int tenant_id { get; set; }
         public string size { get; set; }
         public string created_on { get; set; }

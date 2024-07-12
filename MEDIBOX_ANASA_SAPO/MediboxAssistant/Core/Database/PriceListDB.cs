@@ -51,6 +51,16 @@ namespace Medibox.Database
             DataRow row = baseDAO.DoGetDataRow(sql.ToString());
             return (MakePriceList(row));
         }
+        public PriceList GetPriceListbyID(int pricelist_id)
+        {
+            StringBuilder sql = new StringBuilder();
+            sql.Append(" SELECT * ");
+            sql.Append(" FROM tb_pricelist ");
+            sql.Append(" WHERE pricelist_id = " + pricelist_id.Escape());
+            DataRow row = baseDAO.DoGetDataRow(sql.ToString());
+            return (MakePriceList(row));
+        }
+
         public int UpdatePriceList(IDbConnection connection, IDbTransaction trans, PriceList data)
         {
             lock (lockObject)
