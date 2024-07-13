@@ -29,9 +29,9 @@ namespace Medibox.Presenter
             return InventoryDB.mInstance.GetInventory(id);
         }
 
-        public static Inventory GetInventorybyID(int inventory_id)
+        public static IList<Inventory> GetInventorysbyVarID(int variant_id)
         {
-            return InventoryDB.mInstance.GetInventorybyID(inventory_id);
+            return InventoryDB.mInstance.GetInventorysbyVarID(variant_id);
         }
 
         public static void UpdateInventory(Inventory data)

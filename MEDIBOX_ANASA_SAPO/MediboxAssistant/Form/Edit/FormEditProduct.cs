@@ -197,8 +197,8 @@ namespace Medibox
                 var driverService = ChromeDriverService.CreateDefaultService();
                 driverService.HideCommandPromptWindow = true;
                 var options = new ChromeOptions();
-                //options.AddArgument("--window-position=-32000,-32000"); //an chorme
-                //options.AddArgument("headless");
+                options.AddArgument("--window-position=-32000,-32000"); //an chorme
+                options.AddArgument("headless");
 
                 driver = new ChromeDriver(driverService, options);
                 driver.Navigate().GoToUrl("https://anasa.mysapogo.com/");
@@ -310,31 +310,19 @@ namespace Medibox
                             //}
 
 
-
+                            IList<Inventory> _listinventory = InventoryPresenter.GetInventorysbyVarID(var.variant_id);
                             foreach (Inventory inv in var.inventories)
                             {
-                                if(inv.location_id == 393024)
+                                if (_listinventory.Count > 0)
                                 {
-                                    inv.inventory_id = inv.variant_id * 10;
-                                }
-
-                                if (inv.location_id == 500041)
-                                {
-                                    inv.inventory_id = inv.variant_id * 10 + 1;
-                                }
-
-                                Inventory _inventory = InventoryPresenter.GetInventorybyID(inv.inventory_id);
-                                if (_inventory.id> 0)
-                                {
-                                    inv.id = _inventory.id;
+                                    inv.id = _listinventory.FirstOrDefault(x => x.location_id == inv.location_id).id;
                                     InventoryPresenter.UpdateInventory(inv);
-                                }
+                                } 
                                 else
                                 {
                                     InventoryPresenter.InsertInventory(inv);
                                 }
                             }
-
 
 
 

@@ -52,14 +52,14 @@ namespace Medibox.Database
             return (MakeInventory(row));
         }
 
-        public Inventory GetInventorybyID(int inventory_id)
+        public IList<Inventory> GetInventorysbyVarID(int variant_id)
         {
             StringBuilder sql = new StringBuilder();
             sql.Append(" SELECT * ");
             sql.Append(" FROM tb_inventory ");
-            sql.Append(" WHERE inventory_id = " + inventory_id.Escape());
-            DataRow row = baseDAO.DoGetDataRow(sql.ToString());
-            return (MakeInventory(row));
+            sql.Append(" WHERE inventory_id = " + variant_id.Escape());
+            DataTable dt = baseDAO.DoGetDataTable(sql.ToString());
+            return (MakeInventorys(dt));
         }
 
         public int UpdateInventory(IDbConnection connection, IDbTransaction trans, Inventory data)
