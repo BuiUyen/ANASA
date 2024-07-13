@@ -32,16 +32,18 @@
             this.mListViewData = new Sanita.Utility.UI.ObjectListView();
             this.olvColumn2 = ((Sanita.Utility.UI.OLVColumn)(new Sanita.Utility.UI.OLVColumn()));
             this.olvColumn4 = ((Sanita.Utility.UI.OLVColumn)(new Sanita.Utility.UI.OLVColumn()));
+            this.olvColumn9 = ((Sanita.Utility.UI.OLVColumn)(new Sanita.Utility.UI.OLVColumn()));
             this.olvColumn1 = ((Sanita.Utility.UI.OLVColumn)(new Sanita.Utility.UI.OLVColumn()));
             this.olvColumn5 = ((Sanita.Utility.UI.OLVColumn)(new Sanita.Utility.UI.OLVColumn()));
             this.olvColumn3 = ((Sanita.Utility.UI.OLVColumn)(new Sanita.Utility.UI.OLVColumn()));
             this.olvColumn6 = ((Sanita.Utility.UI.OLVColumn)(new Sanita.Utility.UI.OLVColumn()));
             this.olvColumn7 = ((Sanita.Utility.UI.OLVColumn)(new Sanita.Utility.UI.OLVColumn()));
             this.olvColumn8 = ((Sanita.Utility.UI.OLVColumn)(new Sanita.Utility.UI.OLVColumn()));
-            this.olvColumn9 = ((Sanita.Utility.UI.OLVColumn)(new Sanita.Utility.UI.OLVColumn()));
-            this.olvColumn10 = ((Sanita.Utility.UI.OLVColumn)(new Sanita.Utility.UI.OLVColumn()));
             this.txtSearch = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.panelEx3 = new DevComponents.DotNetBar.PanelEx();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbxCountProduct = new System.Windows.Forms.TextBox();
             this.btnAdd = new DevComponents.DotNetBar.ButtonX();
             this.btnRefresh = new DevComponents.DotNetBar.ButtonX();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
@@ -87,14 +89,13 @@
             // 
             this.mListViewData.AllColumns.Add(this.olvColumn2);
             this.mListViewData.AllColumns.Add(this.olvColumn4);
+            this.mListViewData.AllColumns.Add(this.olvColumn9);
             this.mListViewData.AllColumns.Add(this.olvColumn1);
             this.mListViewData.AllColumns.Add(this.olvColumn5);
             this.mListViewData.AllColumns.Add(this.olvColumn3);
             this.mListViewData.AllColumns.Add(this.olvColumn6);
             this.mListViewData.AllColumns.Add(this.olvColumn7);
             this.mListViewData.AllColumns.Add(this.olvColumn8);
-            this.mListViewData.AllColumns.Add(this.olvColumn9);
-            this.mListViewData.AllColumns.Add(this.olvColumn10);
             this.mListViewData.AlternateRowBackColor = System.Drawing.Color.WhiteSmoke;
             this.mListViewData.AutoArrange = false;
             this.mListViewData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
@@ -102,14 +103,13 @@
             this.mListViewData.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.olvColumn2,
             this.olvColumn4,
+            this.olvColumn9,
             this.olvColumn1,
             this.olvColumn5,
             this.olvColumn3,
             this.olvColumn6,
             this.olvColumn7,
-            this.olvColumn8,
-            this.olvColumn9,
-            this.olvColumn10});
+            this.olvColumn8});
             this.DichVuMenuBar.SetContextMenuEx(this.mListViewData, this.DichVuMenu);
             this.mListViewData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mListViewData.FullRowSelect = true;
@@ -144,64 +144,57 @@
             // 
             this.olvColumn4.AspectName = "id";
             this.olvColumn4.CellPadding = null;
-            this.olvColumn4.Text = "Code";
-            this.olvColumn4.Width = 120;
-            // 
-            // olvColumn1
-            // 
-            this.olvColumn1.AspectName = "tenant_id";
-            this.olvColumn1.CellPadding = null;
-            this.olvColumn1.Text = "tenant_id";
-            this.olvColumn1.Width = 200;
-            // 
-            // olvColumn5
-            // 
-            this.olvColumn5.AspectName = "created_on";
-            this.olvColumn5.CellPadding = null;
-            this.olvColumn5.Text = "created_on";
-            this.olvColumn5.Width = 150;
-            // 
-            // olvColumn3
-            // 
-            this.olvColumn3.AspectName = "modified_on";
-            this.olvColumn3.CellPadding = null;
-            this.olvColumn3.Text = "modified_on";
-            this.olvColumn3.Width = 150;
-            // 
-            // olvColumn6
-            // 
-            this.olvColumn6.AspectName = "LocaltionName";
-            this.olvColumn6.CellPadding = null;
-            this.olvColumn6.Text = "Localtion Name";
-            this.olvColumn6.Width = 150;
-            // 
-            // olvColumn7
-            // 
-            this.olvColumn7.AspectName = "Latitude";
-            this.olvColumn7.CellPadding = null;
-            this.olvColumn7.Text = "Latitude";
-            this.olvColumn7.Width = 100;
-            // 
-            // olvColumn8
-            // 
-            this.olvColumn8.AspectName = "Longitude";
-            this.olvColumn8.CellPadding = null;
-            this.olvColumn8.Text = "Longitude";
-            this.olvColumn8.Width = 100;
+            this.olvColumn4.Text = "ID";
+            this.olvColumn4.Width = 77;
             // 
             // olvColumn9
             // 
-            this.olvColumn9.AspectName = "HassIO_URL";
+            this.olvColumn9.AspectName = "product_id";
             this.olvColumn9.CellPadding = null;
-            this.olvColumn9.Text = "HassIO_URL";
-            this.olvColumn9.Width = 150;
+            this.olvColumn9.Text = "product_id";
+            this.olvColumn9.Width = 126;
             // 
-            // olvColumn10
+            // olvColumn1
             // 
-            this.olvColumn10.AspectName = "HassIO_KEY";
-            this.olvColumn10.CellPadding = null;
-            this.olvColumn10.Text = "HassIO_KEY";
-            this.olvColumn10.Width = 150;
+            this.olvColumn1.AspectName = "name";
+            this.olvColumn1.CellPadding = null;
+            this.olvColumn1.Text = "name";
+            this.olvColumn1.Width = 483;
+            // 
+            // olvColumn5
+            // 
+            this.olvColumn5.AspectName = "opt1";
+            this.olvColumn5.CellPadding = null;
+            this.olvColumn5.Text = "opt1";
+            this.olvColumn5.Width = 58;
+            // 
+            // olvColumn3
+            // 
+            this.olvColumn3.AspectName = "opt2";
+            this.olvColumn3.CellPadding = null;
+            this.olvColumn3.Text = "opt2";
+            this.olvColumn3.Width = 59;
+            // 
+            // olvColumn6
+            // 
+            this.olvColumn6.AspectName = "opt3";
+            this.olvColumn6.CellPadding = null;
+            this.olvColumn6.Text = "opt3";
+            this.olvColumn6.Width = 71;
+            // 
+            // olvColumn7
+            // 
+            this.olvColumn7.AspectName = "category";
+            this.olvColumn7.CellPadding = null;
+            this.olvColumn7.Text = "category";
+            this.olvColumn7.Width = 281;
+            // 
+            // olvColumn8
+            // 
+            this.olvColumn8.AspectName = "tags";
+            this.olvColumn8.CellPadding = null;
+            this.olvColumn8.Text = "tags";
+            this.olvColumn8.Width = 255;
             // 
             // txtSearch
             // 
@@ -230,6 +223,9 @@
             // 
             this.panelEx3.CanvasColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.panelEx3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx3.Controls.Add(this.label2);
+            this.panelEx3.Controls.Add(this.label1);
+            this.panelEx3.Controls.Add(this.tbxCountProduct);
             this.panelEx3.Controls.Add(this.btnAdd);
             this.panelEx3.Controls.Add(this.btnRefresh);
             this.panelEx3.Controls.Add(this.buttonX1);
@@ -250,6 +246,32 @@
             this.panelEx3.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelEx3.Style.GradientAngle = 90;
             this.panelEx3.TabIndex = 220;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1584, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 21);
+            this.label2.TabIndex = 227;
+            this.label2.Text = "sản phẩm.";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1373, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 21);
+            this.label1.TabIndex = 226;
+            this.label1.Text = "Tổng: ";
+            // 
+            // tbxCountProduct
+            // 
+            this.tbxCountProduct.Location = new System.Drawing.Point(1437, 26);
+            this.tbxCountProduct.Name = "tbxCountProduct";
+            this.tbxCountProduct.ReadOnly = true;
+            this.tbxCountProduct.Size = new System.Drawing.Size(141, 27);
+            this.tbxCountProduct.TabIndex = 225;
             // 
             // btnAdd
             // 
@@ -358,7 +380,7 @@
             this.DichVuMenuBar.IsMaximized = false;
             this.DichVuMenuBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.DichVuMenu});
-            this.DichVuMenuBar.Location = new System.Drawing.Point(445, 14);
+            this.DichVuMenuBar.Location = new System.Drawing.Point(986, 24);
             this.DichVuMenuBar.Margin = new System.Windows.Forms.Padding(4);
             this.DichVuMenuBar.Name = "DichVuMenuBar";
             this.DichVuMenuBar.Size = new System.Drawing.Size(105, 29);
@@ -434,6 +456,7 @@
             this.panelEx1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mListViewData)).EndInit();
             this.panelEx3.ResumeLayout(false);
+            this.panelEx3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DichVuMenuBar)).EndInit();
             this.ResumeLayout(false);
 
@@ -467,7 +490,9 @@
         private Sanita.Utility.UI.OLVColumn olvColumn6;
         private Sanita.Utility.UI.OLVColumn olvColumn7;
         private Sanita.Utility.UI.OLVColumn olvColumn8;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbxCountProduct;
         private Sanita.Utility.UI.OLVColumn olvColumn9;
-        private Sanita.Utility.UI.OLVColumn olvColumn10;
     }
 }

@@ -51,6 +51,17 @@ namespace Medibox.Database
             DataRow row = baseDAO.DoGetDataRow(sql.ToString());
             return (MakeInventory(row));
         }
+
+        public Inventory GetInventorybyID(int inventory_id)
+        {
+            StringBuilder sql = new StringBuilder();
+            sql.Append(" SELECT * ");
+            sql.Append(" FROM tb_inventory ");
+            sql.Append(" WHERE inventory_id = " + inventory_id.Escape());
+            DataRow row = baseDAO.DoGetDataRow(sql.ToString());
+            return (MakeInventory(row));
+        }
+
         public int UpdateInventory(IDbConnection connection, IDbTransaction trans, Inventory data)
         {
             lock (lockObject)

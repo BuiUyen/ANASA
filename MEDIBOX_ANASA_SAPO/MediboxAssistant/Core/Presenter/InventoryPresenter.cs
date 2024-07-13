@@ -28,6 +28,12 @@ namespace Medibox.Presenter
         {
             return InventoryDB.mInstance.GetInventory(id);
         }
+
+        public static Inventory GetInventorybyID(int inventory_id)
+        {
+            return InventoryDB.mInstance.GetInventorybyID(inventory_id);
+        }
+
         public static void UpdateInventory(Inventory data)
         {
             InventoryDB.mInstance.UpdateInventory(null, null, data);

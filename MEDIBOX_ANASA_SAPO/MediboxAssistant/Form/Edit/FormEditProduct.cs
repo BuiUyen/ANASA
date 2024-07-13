@@ -51,7 +51,7 @@ namespace Medibox
             SaveData,
         }
 
-        public FormEditProduct(Device _mDevice, IList<Device> _mListDevice)
+        public FormEditProduct(Product _mProduct, IList<Product> _mListProduct)
         {
             InitializeComponent();
             this.Translate();
@@ -110,7 +110,7 @@ namespace Medibox
 
         private void bwAsync_WorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            mProgress.DoClose();
+            //mProgress.DoClose();
             ProcessingType type = (ProcessingType)e.Result;
 
             switch (type)
@@ -136,7 +136,6 @@ namespace Medibox
                 case ProcessingType.SaveData:
                     {
                         Run();
-                        labelTEXT.Text  = stt.ToString();
                     }
                     break;
                 default:
@@ -188,307 +187,214 @@ namespace Medibox
             {
                 SendKeys.SendWait("{TAB}");
             }
-        }        
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var driverService = ChromeDriverService.CreateDefaultService();
-            driverService.HideCommandPromptWindow = true;
-            var options = new ChromeOptions();
-            //options.AddArgument("--window-position=-32000,-32000"); //an chorme
-            //options.AddArgument("headless");
-
-            driver = new ChromeDriver(driverService, options);
-            driver.Navigate().GoToUrl("https://anasa.mysapogo.com/");
-            System.Threading.Thread.Sleep(3000);
-            driver.FindElementById("username").SendKeys("0327006111");
-            driver.FindElementById("password").SendKeys("@Uyen23071998");
-            driver.FindElement(By.Name("password")).SendKeys(OpenQA.Selenium.Keys.Return);//Đăng nhập tài khoản
-            System.Threading.Thread.Sleep(10000);
-            ((IJavaScriptExecutor)driver).ExecuteScript("window.open();");
-            driver.SwitchTo().Window(driver.WindowHandles.Last());
-
-            for (int i = 0;  i < 500; i++)
-            {
-                driver.Navigate().GoToUrl("https://anasa.mysapogo.com/admin/products.json?page="+ i.ToString());
-                var todo = driver.FindElement(By.TagName("Body")).Text;
-                Root _root = JsonConvert.DeserializeObject<Root>(todo);
-
-                if (_root.products.Count == 0)
-                {
-                    break;
-                }
-
-                foreach(Product pro in _root.products) // cập nhật sản phẩm chính
-                {
-                    Product _product = ProductPresenter.GetProductbyID(pro.id);
-                    pro.product_id = pro.id;
-
-                    if (_product.id > 0)
-                    {                        
-                        pro.id = _product.id;                        
-                        ProductPresenter.UpdateProduct(pro);                        
-                    }
-                    else
-                    {
-                        pro.product_id = pro.id;
-                        ProductPresenter.InsertProduct(pro);
-                    }
-
-                    foreach (Variant var in pro.variants) // cập nhật bảng phân loại sản phẩm
-                    {
-                        Variant _variant = VariantPresenter.GetVariantbyID(var.id);
-                        var.variant_id = var.id;
-
-                        if (_variant.id > 0)
-                        {
-                            var.id = _variant.id;
-                            VariantPresenter.UpdateVariant(var);                            
-                        }
-                        else
-                        {
-                            VariantPresenter.InsertVariant(var);
-                        }
-
-                        foreach (VariantPrice var_pri in var.variant_prices) // cập nhật chính sách giá từng phân loại
-                        {
-                            VariantPrice _variantprice = VariantPricePresenter.GetVariantPricebyID(var_pri.id);
-
-                            var_pri.variant_id = var.variant_id;
-                            var_pri.variantprice_id = var_pri.id;
-
-                            if (_variantprice.id > 0)
-                            {
-                                var_pri.id = _variantprice.id;
-                                VariantPricePresenter.UpdateVariantPrice(var_pri);
-                            }
-                            else
-                            {
-                                VariantPricePresenter.InsertVariantPrice(var_pri);
-                            }
-
-
-                            // cập nhật chính sách chung của shop
-                            PriceList pri_list = var_pri.price_list;
-                            PriceList _pricelist = PriceListPresenter.GetPriceListbyID(pri_list.id);                                                        
-                            pri_list.pricelist_id = pri_list.id;
-
-                            if (_pricelist.id > 0)
-                            {
-                                pri_list.id = _pricelist.id;
-                                PriceListPresenter.UpdatePriceList(pri_list);
-                            }
-                            else
-                            {
-                                PriceListPresenter.InsertPriceList(pri_list);
-                            }
-                        }
-                    }
-
-
-                    foreach (Option opt in pro.options)
-                    {
-                        Option _option = OptionPresenter.GetOptionbyID(opt.id);
-                        opt.product_id = pro.product_id;
-                        opt.option_id = opt.id;
-
-                        string _stringvalues = "";
-                        foreach (string st in opt.values)
-                        {
-                            _stringvalues = _stringvalues + "\"" + st + "\",";
-                        }
-                        opt.stringvalues = _stringvalues;
-
-                        if (_option.id > 0)
-                        {
-                            opt.id = _option.id;
-                            OptionPresenter.UpdateOption(opt);
-                        }
-                        else
-                        {                                     
-                            OptionPresenter.InsertOption(opt);
-                        }
-                    } //cập nhật bảng tên phân loại sản phẩm
-
-                    foreach (Image ima in pro.images)
-                    {
-                        Image _image = ImagePresenter.GetImagebyID(ima.id);
-                        ima.product_id = pro.product_id;
-                        ima.image_id = ima.id;
-                        
-                        if (_image.id > 0)
-                        {
-                            ima.id = _image.id;
-                            ImagePresenter.UpdateImage(ima);
-                        }
-                        else
-                        {
-                            ImagePresenter.InsertImage(ima);
-                        }
-                    } //cập nhật ảnh sản phẩm
-
-
-
-
-
-                }                
-            }
-            
-                                    
         }
-
 
 
         private void Run()
         {
-            var driverService = ChromeDriverService.CreateDefaultService();
-            driverService.HideCommandPromptWindow = true;
-            var options = new ChromeOptions();
-            //options.AddArgument("--window-position=-32000,-32000"); //an chorme
-            //options.AddArgument("headless");
+            try
+            { 
+                var driverService = ChromeDriverService.CreateDefaultService();
+                driverService.HideCommandPromptWindow = true;
+                var options = new ChromeOptions();
+                //options.AddArgument("--window-position=-32000,-32000"); //an chorme
+                //options.AddArgument("headless");
 
-            driver = new ChromeDriver(driverService, options);
-            driver.Navigate().GoToUrl("https://anasa.mysapogo.com/");
-            System.Threading.Thread.Sleep(3000);
-            driver.FindElementById("username").SendKeys("0327006111");
-            driver.FindElementById("password").SendKeys("@Uyen23071998");
-            driver.FindElement(By.Name("password")).SendKeys(OpenQA.Selenium.Keys.Return);//Đăng nhập tài khoản
-            System.Threading.Thread.Sleep(10000);
-            ((IJavaScriptExecutor)driver).ExecuteScript("window.open();");
-            driver.SwitchTo().Window(driver.WindowHandles.Last());
+                driver = new ChromeDriver(driverService, options);
+                driver.Navigate().GoToUrl("https://anasa.mysapogo.com/");
+                System.Threading.Thread.Sleep(3000);
+                driver.FindElementById("username").SendKeys("0327006111");
+                driver.FindElementById("password").SendKeys("@Uyen23071998");
+                driver.FindElement(By.Name("password")).SendKeys(OpenQA.Selenium.Keys.Return);//Đăng nhập tài khoản
+                System.Threading.Thread.Sleep(10000);
+                ((IJavaScriptExecutor)driver).ExecuteScript("window.open();");
+                driver.SwitchTo().Window(driver.WindowHandles.Last());
 
-            for (int i = 0; i < 500; i++)
-            {
-                stt = i;
-                driver.Navigate().GoToUrl("https://anasa.mysapogo.com/admin/products.json?page=" + i.ToString());
-                var todo = driver.FindElement(By.TagName("Body")).Text;
-                Root _root = JsonConvert.DeserializeObject<Root>(todo);
-
-                if (_root.products.Count == 0)
+                for (int i = 0; i < 500; i++)
                 {
-                    break;
-                }
+                    stt = i;
+                    driver.Navigate().GoToUrl("https://anasa.mysapogo.com/admin/products.json?page=" + i.ToString());
+                    var todo = driver.FindElement(By.TagName("Body")).Text;
+                    Root _root = JsonConvert.DeserializeObject<Root>(todo);
 
-                foreach (Product pro in _root.products) // cập nhật sản phẩm chính
-                {
-                    Product _product = ProductPresenter.GetProductbyID(pro.id);
-                    pro.product_id = pro.id;
-
-                    if (_product.id > 0)
+                    if (_root.products.Count == 0)
                     {
-                        pro.id = _product.id;
-                        ProductPresenter.UpdateProduct(pro);
+                        break;
                     }
-                    else
+
+                    foreach (Product pro in _root.products) // cập nhật sản phẩm chính
                     {
+                        Product _product = ProductPresenter.GetProductbyID(pro.id);
                         pro.product_id = pro.id;
-                        ProductPresenter.InsertProduct(pro);
-                    }
 
-                    foreach (Variant var in pro.variants) // cập nhật bảng phân loại sản phẩm
-                    {
-                        Variant _variant = VariantPresenter.GetVariantbyID(var.id);
-                        var.variant_id = var.id;
-
-                        if (_variant.id > 0)
+                        if (_product.id > 0)
                         {
-                            var.id = _variant.id;
-                            VariantPresenter.UpdateVariant(var);
+                            pro.id = _product.id;
+                            ProductPresenter.UpdateProduct(pro);
                         }
                         else
                         {
-                            VariantPresenter.InsertVariant(var);
+                            ProductPresenter.InsertProduct(pro);
                         }
 
-                        foreach (VariantPrice var_pri in var.variant_prices) // cập nhật chính sách giá từng phân loại
+                        foreach (Variant var in pro.variants) // cập nhật bảng phân loại sản phẩm
                         {
-                            VariantPrice _variantprice = VariantPricePresenter.GetVariantPricebyID(var_pri.id);
+                            Variant _variant = VariantPresenter.GetVariantbyID(var.id);
+                            var.variant_id = var.id;
 
-                            var_pri.variant_id = var.variant_id;
-                            var_pri.variantprice_id = var_pri.id;
-
-                            if (_variantprice.id > 0)
+                            if (_variant.id > 0)
                             {
-                                var_pri.id = _variantprice.id;
-                                VariantPricePresenter.UpdateVariantPrice(var_pri);
+                                var.id = _variant.id;
+                                VariantPresenter.UpdateVariant(var);
                             }
                             else
                             {
-                                VariantPricePresenter.InsertVariantPrice(var_pri);
+                                VariantPresenter.InsertVariant(var);
+                            }
+
+                            foreach (VariantPrice var_pri in var.variant_prices) // cập nhật chính sách giá từng phân loại
+                            {
+                                VariantPrice _variantprice = VariantPricePresenter.GetVariantPricebyID(var_pri.id);
+
+                                var_pri.variant_id = var.variant_id;
+                                var_pri.variantprice_id = var_pri.id;
+
+                                if (_variantprice.id > 0)
+                                {
+                                    var_pri.id = _variantprice.id;
+                                    VariantPricePresenter.UpdateVariantPrice(var_pri);
+                                }
+                                else
+                                {
+                                    VariantPricePresenter.InsertVariantPrice(var_pri);
+                                }
+
+
+                                // cập nhật chính sách chung của shop
+                                PriceList pri_list = var_pri.price_list;
+                                PriceList _pricelist = PriceListPresenter.GetPriceListbyID(pri_list.id);
+                                pri_list.pricelist_id = pri_list.id;
+
+                                if (_pricelist.id > 0)
+                                {
+                                    pri_list.id = _pricelist.id;
+                                    PriceListPresenter.UpdatePriceList(pri_list);
+                                }
+                                else
+                                {
+                                    PriceListPresenter.InsertPriceList(pri_list);
+                                }
                             }
 
 
-                            // cập nhật chính sách chung của shop
-                            PriceList pri_list = var_pri.price_list;
-                            PriceList _pricelist = PriceListPresenter.GetPriceListbyID(pri_list.id);
-                            pri_list.pricelist_id = pri_list.id;
+                            //List<Inventory> _inventory_list = InventoryPresenter.GetInventorys().ToList();
+                            //List<Inventory> list = _inventory_list.FindAll(x => x.variant_id == var.variant_id);
+                            //// cập nhật tồn kho từng phân loại
+                            //foreach (Inventory inv in var.inventories)
+                            //{
+                            //    if (list.Count > 0)
+                            //    {
+                            //        foreach (Inventory inventory in list)
+                            //        {
+                            //            if (inventory.location_id == inv.location_id)
+                            //            {
+                            //                inv.id = inventory.id;
+                            //                InventoryPresenter.UpdateInventory(inv);
+                            //            }
+                            //        }
+                            //    }
+                            //    else
+                            //    {
+                            //        InventoryPresenter.InsertInventory(inv);
+                            //    }
+                            //}
 
-                            if (_pricelist.id > 0)
+
+
+                            foreach (Inventory inv in var.inventories)
                             {
-                                pri_list.id = _pricelist.id;
-                                PriceListPresenter.UpdatePriceList(pri_list);
+                                if(inv.location_id == 393024)
+                                {
+                                    inv.inventory_id = inv.variant_id * 10;
+                                }
+
+                                if (inv.location_id == 500041)
+                                {
+                                    inv.inventory_id = inv.variant_id * 10 + 1;
+                                }
+
+                                Inventory _inventory = InventoryPresenter.GetInventorybyID(inv.inventory_id);
+                                if (_inventory.id> 0)
+                                {
+                                    inv.id = _inventory.id;
+                                    InventoryPresenter.UpdateInventory(inv);
+                                }
+                                else
+                                {
+                                    InventoryPresenter.InsertInventory(inv);
+                                }
+                            }
+
+
+
+
+                        }
+
+
+                        foreach (Option opt in pro.options)
+                        {
+                            Option _option = OptionPresenter.GetOptionbyID(opt.id);
+                            opt.product_id = pro.product_id;
+                            opt.option_id = opt.id;
+
+                            string _stringvalues = "";
+                            foreach (string st in opt.values)
+                            {
+                                _stringvalues = _stringvalues + "\"" + st + "\",";
+                            }
+                            opt.stringvalues = _stringvalues;
+
+                            if (_option.id > 0)
+                            {
+                                opt.id = _option.id;
+                                OptionPresenter.UpdateOption(opt);
                             }
                             else
                             {
-                                PriceListPresenter.InsertPriceList(pri_list);
+                                OptionPresenter.InsertOption(opt);
                             }
-                        }
+                        } //cập nhật bảng tên phân loại sản phẩm
 
+                        foreach (Image ima in pro.images)
+                        {
+                            Image _image = ImagePresenter.GetImagebyID(ima.id);
+                            ima.product_id = pro.product_id;
+                            ima.image_id = ima.id;
 
-
-
+                            if (_image.id > 0)
+                            {
+                                ima.id = _image.id;
+                                ImagePresenter.UpdateImage(ima);
+                            }
+                            else
+                            {
+                                ImagePresenter.InsertImage(ima);
+                            }
+                        } //cập nhật ảnh sản phẩm
 
                     }
-
-
-                    foreach (Option opt in pro.options)
-                    {
-                        Option _option = OptionPresenter.GetOptionbyID(opt.id);
-                        opt.product_id = pro.product_id;
-                        opt.option_id = opt.id;
-
-                        string _stringvalues = "";
-                        foreach (string st in opt.values)
-                        {
-                            _stringvalues = _stringvalues + "\"" + st + "\",";
-                        }
-                        opt.stringvalues = _stringvalues;
-
-                        if (_option.id > 0)
-                        {
-                            opt.id = _option.id;
-                            OptionPresenter.UpdateOption(opt);
-                        }
-                        else
-                        {
-                            OptionPresenter.InsertOption(opt);
-                        }
-                    } //cập nhật bảng tên phân loại sản phẩm
-
-                    foreach (Image ima in pro.images)
-                    {
-                        Image _image = ImagePresenter.GetImagebyID(ima.id);
-                        ima.product_id = pro.product_id;
-                        ima.image_id = ima.id;
-
-                        if (_image.id > 0)
-                        {
-                            ima.id = _image.id;
-                            ImagePresenter.UpdateImage(ima);
-                        }
-                        else
-                        {
-                            ImagePresenter.InsertImage(ima);
-                        }
-                    } //cập nhật ảnh sản phẩm
-
-
-
-
-
                 }
-            }
 
+                driver.Close();
+                driver.Quit();
+
+
+
+            }
+            catch (Exception ex) 
+            {
+               MessageBox.Show(ex.ToString());
+            }
 
         }
     }

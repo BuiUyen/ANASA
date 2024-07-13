@@ -18,7 +18,7 @@ namespace Medibox
         private FormProgress mProgress = new FormProgress();
         private ExBackgroundWorker mThread;
 
-        private IList<Device> mListDevice = new List<Device>();
+        private IList<Product> mListProduct = new List<Product>();
 
 
         private enum ProcessingType
@@ -96,7 +96,8 @@ namespace Medibox
             {
                 case ProcessingType.LoadData:
                     {
-                        UtilityListView.ListViewRefresh(mListViewData, mListDevice);
+                        tbxCountProduct.Text = mListProduct.Count.ToString();
+                        UtilityListView.ListViewRefresh(mListViewData, mListProduct);
                     }
                     break;
                 default:
@@ -113,7 +114,7 @@ namespace Medibox
             {
                 case ProcessingType.LoadData:
                     {
-                        mListDevice = DevicePresenter.GetDevices();
+                        mListProduct = ProductPresenter.GetProducts();
                     }
                     break;
                 default:
@@ -148,10 +149,10 @@ namespace Medibox
 
         private void mListViewData_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            Device data = mListViewData.SelectedObject as Device;
-            if (data != null && data.DeviceID > 0)
+            Product data = mListViewData.SelectedObject as Product;
+            if (data != null && data.product_id > 0)
             {
-                using (FormEditDevice form = new FormEditDevice(data, mListDevice))
+                using (FormEditProduct form = new FormEditProduct(data, mListProduct))
                 {
                     if (form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
@@ -163,7 +164,7 @@ namespace Medibox
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            using (FormEditProduct form = new FormEditProduct(null, mListDevice))
+            using (FormEditProduct form = new FormEditProduct(null, mListProduct))
             {
                 if (form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {

@@ -1,0 +1,11 @@
+[41944] 21:42:31.798 D/Program: Name:MediboxAssistant
+[41944] 21:42:31.799 D/Program: Description:Build: 24/04/2019
+[41944] 21:42:31.800 D/Program: Version:1.0.0.1
+[41944] 21:42:32.000 D/SoftUpdatePresenter: DoUpdateDatabaseSQL--START
+[41944] 21:42:32.000 D/SoftUpdatePresenter: Database sql = 
+[41944] 21:42:32.000 D/SoftUpdatePresenter: Software sql = 20
+[41944] 21:42:32.000 D/SoftUpdatePresenter: BEGIN UPDATE SQL
+[41944] 21:42:32.000 D/SoftUpdatePresenter: END UPDATE SQL
+[41944] 21:42:32.000 E/SoftUpdatePresenter: System.InvalidOperationException: No transaction in progress.
+   at Npgsql.NpgsqlTransaction.Commit()
+   at Medibox.Presenter.SoftUpdatePresenter.DoUpdateDatabaseSQL() in C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\Core\Presenter\SoftUpdatePresenter.cs:line 139

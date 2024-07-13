@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-            this.button1 = new System.Windows.Forms.Button();
+            this.labelTEXT = new System.Windows.Forms.Label();
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
             this.btnSave = new DevComponents.DotNetBar.ButtonX();
-            this.labelTEXT = new System.Windows.Forms.Label();
             this.panelEx1.SuspendLayout();
             this.panelEx2.SuspendLayout();
             this.SuspendLayout();
@@ -42,14 +41,13 @@
             this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.panelEx1.Controls.Add(this.labelTEXT);
-            this.panelEx1.Controls.Add(this.button1);
             this.panelEx1.Controls.Add(this.panelEx2);
             this.panelEx1.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx1.Location = new System.Drawing.Point(0, 0);
-            this.panelEx1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelEx1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(475, 494);
+            this.panelEx1.Size = new System.Drawing.Size(611, 587);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.panelEx1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
@@ -58,16 +56,16 @@
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 32;
             // 
-            // button1
+            // labelTEXT
             // 
-            this.button1.Location = new System.Drawing.Point(177, 80);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 45);
-            this.button1.TabIndex = 101;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.labelTEXT.AutoSize = true;
+            this.labelTEXT.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTEXT.Location = new System.Drawing.Point(82, 37);
+            this.labelTEXT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTEXT.Name = "labelTEXT";
+            this.labelTEXT.Size = new System.Drawing.Size(443, 41);
+            this.labelTEXT.TabIndex = 105;
+            this.labelTEXT.Text = "Chạy Tool Lấy Dữ Liệu Sapo";
             // 
             // panelEx2
             // 
@@ -76,10 +74,11 @@
             this.panelEx2.Controls.Add(this.btnSave);
             this.panelEx2.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelEx2.Location = new System.Drawing.Point(0, 454);
+            this.panelEx2.Location = new System.Drawing.Point(0, 539);
+            this.panelEx2.Margin = new System.Windows.Forms.Padding(4);
             this.panelEx2.Name = "panelEx2";
             this.panelEx2.Padding = new System.Windows.Forms.Padding(1);
-            this.panelEx2.Size = new System.Drawing.Size(475, 40);
+            this.panelEx2.Size = new System.Drawing.Size(611, 48);
             this.panelEx2.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.panelEx2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
@@ -97,32 +96,24 @@
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSave.Image = global::MediboxAssistant.Properties.Resources.Save_32x32;
-            this.btnSave.Location = new System.Drawing.Point(359, 1);
+            this.btnSave.Location = new System.Drawing.Point(462, 1);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlS);
-            this.btnSave.Size = new System.Drawing.Size(115, 38);
+            this.btnSave.Size = new System.Drawing.Size(148, 46);
             this.btnSave.TabIndex = 100;
             this.btnSave.Text = "Lưu";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // labelTEXT
-            // 
-            this.labelTEXT.AutoSize = true;
-            this.labelTEXT.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTEXT.Location = new System.Drawing.Point(249, 194);
-            this.labelTEXT.Name = "labelTEXT";
-            this.labelTEXT.Size = new System.Drawing.Size(60, 33);
-            this.labelTEXT.TabIndex = 105;
-            this.labelTEXT.Text = "123";
-            // 
             // FormEditProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 494);
+            this.ClientSize = new System.Drawing.Size(611, 587);
             this.Controls.Add(this.panelEx1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormEditProduct";
-            this.Text = "Cập Nhật Thiết Bị";
+            this.Text = "Cập Nhật Sản Phẩm";
             this.Load += new System.EventHandler(this.Database_Load);
             this.panelEx1.ResumeLayout(false);
             this.panelEx1.PerformLayout();
@@ -135,7 +126,6 @@
         private DevComponents.DotNetBar.PanelEx panelEx1;
         private DevComponents.DotNetBar.PanelEx panelEx2;
         private DevComponents.DotNetBar.ButtonX btnSave;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelTEXT;
     }
 }
