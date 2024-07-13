@@ -20,6 +20,8 @@ namespace Medibox
     public partial class FormEditProduct : FormBase
     {
         private const String TAG = "FormEditProduct";
+        private bool isOK = true;
+        private DialogResult result = DialogResult.Cancel;
 
         public class Root
         {
@@ -82,37 +84,47 @@ namespace Medibox
         {
             try
             {
-                if (e.ProgressPercentage == -123456)
+                if (e.ProgressPercentage == 0)
                 {
-                    mProgress = new FormProgress();
-                    mProgress.Progress.TextVisible = false;
-                    mProgress.ShowDialog();
-                }
-                else if (e.ProgressPercentage == 0)
-                {
-                    mProgress.Progress.Value = 0;
-                    mProgress.Progress.Maximum = (int)e.UserState;
-                }
-                else if (e.ProgressPercentage > 0)
-                {
-                    mProgress.Progress.Value = e.ProgressPercentage;
-                    mProgress.Progress.Text = string.Format("{0}%", (mProgress.Progress.Value * 100) / mProgress.Progress.Maximum);
+                    printProgress.TextVisible = true;
+                    printProgress.Value = 0;
+                    if (e.UserState is int)
+                    {
+                        printProgress.Maximum = (int)e.UserState;
+                    }
                 }
                 else if (e.ProgressPercentage < 0)
                 {
-                    SanitaMessageBox.Show("Có lỗi xảy ra !", "Thông Báo".Translate());
+                    if (e.UserState is string)
+                    {
+                        txtStatus.Text = e.UserState.ToString();
+                    }
+
+                    isOK = false;
+                    SanitaMessageBox.Show("Không thể nâng cấp cơ sở dữ liệu !", "Nâng Cấp Cơ Sở Dữ Liệu");
+                }
+                else
+                {
+                    if (e.UserState is string)
+                    {
+                        txtStatus.Text = e.UserState.ToString();
+                    }
+
+                    printProgress.Value = e.ProgressPercentage;
+                    printProgress.Text = string.Format("{0}%", (printProgress.Value * 100) / printProgress.Maximum);
                 }
             }
             catch
             {
             }
+
         }
 
         private void bwAsync_WorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             //mProgress.DoClose();
             ProcessingType type = (ProcessingType)e.Result;
-
+            
             switch (type)
             {
                 case ProcessingType.SaveData:
