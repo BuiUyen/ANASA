@@ -12,3 +12,43 @@ C:\Users\huuuy\Desktop\GITHUB\Checker\Checker\obj\Debug\Checker.exe
 C:\Users\huuuy\Desktop\GITHUB\Checker\Checker\obj\Debug\Checker.pdb
 C:\Users\huuuy\Desktop\GITHUB\Checker\Checker\obj\Debug\Checker.csproj.AssemblyReference.cache
 C:\Users\huuuy\Desktop\GITHUB\Checker\Checker\obj\Debug\Checker.csproj.SuggestedBindingRedirects.cache
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\bin\Debug\Checker.exe.config
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\bin\Debug\Checker.exe
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\bin\Debug\Checker.pdb
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\bin\Debug\WebDriver.dll
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\bin\Debug\WebDriver.xml
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\obj\Debug\Checker.csproj.AssemblyReference.cache
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\obj\Debug\Checker.Form1.resources
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\obj\Debug\Checker.Properties.Resources.resources
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\obj\Debug\Checker.csproj.GenerateResource.cache
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\obj\Debug\Checker.csproj.CoreCompileInputs.cache
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\obj\Debug\Checker.csproj.Up2Date
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\obj\Debug\Checker.exe
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\obj\Debug\Checker.pdb
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\obj\Debug\Checker.Form2.resources
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\bin\Debug\ExcelDataReader.DataSet.dll
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\bin\Debug\ExcelDataReader.dll
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\bin\Debug\ExcelDataReader.pdb
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\bin\Debug\ExcelDataReader.xml
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\Visual Code\BuiUyen\GITHUB\Checker\Checker\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\bin\Debug\Checker.exe.config
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\bin\Debug\Checker.exe
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\bin\Debug\Checker.pdb
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\bin\Debug\ExcelDataReader.dll
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\bin\Debug\WebDriver.dll
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\bin\Debug\ExcelDataReader.pdb
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\bin\Debug\ExcelDataReader.xml
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\bin\Debug\WebDriver.xml
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\obj\Debug\Checker.csproj.AssemblyReference.cache
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\obj\Debug\Checker.Form2.resources
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\obj\Debug\Checker.Form1.resources
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\obj\Debug\Checker.Properties.Resources.resources
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\obj\Debug\Checker.csproj.GenerateResource.cache
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\obj\Debug\Checker.csproj.CoreCompileInputs.cache
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\obj\Debug\Checker.csproj.CopyComplete
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\obj\Debug\Checker.exe
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Checker\Checker\obj\Debug\Checker.pdb

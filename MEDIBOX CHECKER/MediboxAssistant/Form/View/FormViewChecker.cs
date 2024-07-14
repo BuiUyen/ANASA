@@ -207,5 +207,27 @@ namespace Medibox
                     );
             }
         }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            using (FormEditXchina form = new FormEditXchina(null, null))
+            {
+                if (form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    DoRefresh();
+                }
+            }
+        }
+
+        private void btnDownload_Click(object sender, EventArgs e)
+        {
+            using (FormEditXchina2 form = new FormEditXchina2(null, mListChecker))
+            {
+                if (form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    DoRefresh();
+                }
+            }
+        }
     }
 }

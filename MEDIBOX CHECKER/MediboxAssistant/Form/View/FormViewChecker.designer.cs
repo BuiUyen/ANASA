@@ -45,13 +45,13 @@
             this.btnImport = new DevComponents.DotNetBar.ButtonItem();
             this.btnExport = new DevComponents.DotNetBar.ButtonItem();
             this.btnExit = new DevComponents.DotNetBar.ButtonItem();
-            this.lblBenhAn = new DevComponents.DotNetBar.LabelX();
-            this.DichVuMenuBar = new DevComponents.DotNetBar.ContextMenuBar();
-            this.DichVuMenu = new DevComponents.DotNetBar.ButtonItem();
             this.labelItem2 = new DevComponents.DotNetBar.LabelItem();
             this.btnXoa = new DevComponents.DotNetBar.ButtonItem();
             this.DataProgress = new DevComponents.DotNetBar.Controls.CircularProgress();
             this.controlContainerItem1 = new DevComponents.DotNetBar.ControlContainerItem();
+            this.DichVuMenu = new DevComponents.DotNetBar.ButtonItem();
+            this.DichVuMenuBar = new DevComponents.DotNetBar.ContextMenuBar();
+            this.btnDownload = new DevComponents.DotNetBar.ButtonX();
             this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mListViewData)).BeginInit();
             this.panelEx3.SuspendLayout();
@@ -68,9 +68,9 @@
             this.panelEx1.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx1.Location = new System.Drawing.Point(0, 0);
-            this.panelEx1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelEx1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(1350, 690);
+            this.panelEx1.Size = new System.Drawing.Size(1736, 819);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.panelEx1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
@@ -98,17 +98,17 @@
             this.olvColumn5,
             this.olvColumn3,
             this.olvColumn6});
-            this.DichVuMenuBar.SetContextMenuEx(this.mListViewData, this.DichVuMenu);
             this.mListViewData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mListViewData.FullRowSelect = true;
             this.mListViewData.GridLines = true;
             this.mListViewData.HideSelection = false;
-            this.mListViewData.Location = new System.Drawing.Point(0, 87);
+            this.mListViewData.Location = new System.Drawing.Point(0, 103);
+            this.mListViewData.Margin = new System.Windows.Forms.Padding(4);
             this.mListViewData.MenuLabelSortAscending = "Sắp xếp tăng dần theo \'{0}\'";
             this.mListViewData.MultiSelect = false;
             this.mListViewData.Name = "mListViewData";
             this.mListViewData.ShowGroups = false;
-            this.mListViewData.Size = new System.Drawing.Size(1350, 603);
+            this.mListViewData.Size = new System.Drawing.Size(1736, 716);
             this.mListViewData.SortGroupItemsByPrimaryColumn = false;
             this.mListViewData.TabIndex = 222;
             this.mListViewData.UnfocusedHighlightBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
@@ -176,10 +176,11 @@
             this.txtSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtSearch.FocusHighlightEnabled = true;
             this.txtSearch.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(0, 60);
+            this.txtSearch.Location = new System.Drawing.Point(0, 71);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PreventEnterBeep = true;
-            this.txtSearch.Size = new System.Drawing.Size(1350, 27);
+            this.txtSearch.Size = new System.Drawing.Size(1736, 32);
             this.txtSearch.TabIndex = 221;
             this.txtSearch.WatermarkColor = System.Drawing.Color.DimGray;
             this.txtSearch.WatermarkText = "Tìm kiếm (Ctrl+F)";
@@ -188,22 +189,22 @@
             // 
             this.panelEx3.CanvasColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.panelEx3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx3.Controls.Add(this.btnDownload);
             this.panelEx3.Controls.Add(this.btnAdd);
             this.panelEx3.Controls.Add(this.btnRefresh);
             this.panelEx3.Controls.Add(this.buttonX1);
-            this.panelEx3.Controls.Add(this.lblBenhAn);
-            this.panelEx3.Controls.Add(this.DichVuMenuBar);
             this.panelEx3.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEx3.Location = new System.Drawing.Point(0, 0);
+            this.panelEx3.Margin = new System.Windows.Forms.Padding(4);
             this.panelEx3.Name = "panelEx3";
             this.panelEx3.Padding = new System.Windows.Forms.Padding(1);
-            this.panelEx3.Size = new System.Drawing.Size(1350, 60);
+            this.panelEx3.Size = new System.Drawing.Size(1736, 71);
             this.panelEx3.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.panelEx3.Style.BackColor2.Color = System.Drawing.SystemColors.Control;
+            this.panelEx3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.panelEx3.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
             this.panelEx3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
             this.panelEx3.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.panelEx3.Style.BorderSide = DevComponents.DotNetBar.eBorderSide.Top;
             this.panelEx3.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelEx3.Style.GradientAngle = 90;
             this.panelEx3.TabIndex = 220;
@@ -216,9 +217,10 @@
             this.btnAdd.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnAdd.Image = global::MediboxAssistant.Properties.Resources.Add_32x32;
             this.btnAdd.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnAdd.Location = new System.Drawing.Point(120, 1);
+            this.btnAdd.Location = new System.Drawing.Point(275, 1);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(70, 58);
+            this.btnAdd.Size = new System.Drawing.Size(174, 69);
             this.btnAdd.TabIndex = 147;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -231,9 +233,10 @@
             this.btnRefresh.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnRefresh.Image = global::MediboxAssistant.Properties.Resources.Refresh_32__1_;
             this.btnRefresh.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnRefresh.Location = new System.Drawing.Point(50, 1);
+            this.btnRefresh.Location = new System.Drawing.Point(143, 1);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(70, 58);
+            this.btnRefresh.Size = new System.Drawing.Size(132, 69);
             this.btnRefresh.TabIndex = 148;
             this.btnRefresh.Text = "Làm Mới";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
@@ -245,17 +248,19 @@
             this.buttonX1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
             this.buttonX1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonX1.Image = global::MediboxAssistant.Properties.Resources.cdt_20x20;
             this.buttonX1.Location = new System.Drawing.Point(1, 1);
+            this.buttonX1.Margin = new System.Windows.Forms.Padding(4);
             this.buttonX1.Name = "buttonX1";
             this.buttonX1.ShowSubItems = false;
-            this.buttonX1.Size = new System.Drawing.Size(49, 58);
+            this.buttonX1.Size = new System.Drawing.Size(142, 69);
             this.buttonX1.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.labelItem1,
             this.btnImport,
             this.btnExport,
             this.btnExit});
             this.buttonX1.TabIndex = 146;
-            this.buttonX1.Visible = false;
+            this.buttonX1.Text = "FILE";
             // 
             // labelItem1
             // 
@@ -274,6 +279,7 @@
             this.btnImport.GlobalItem = false;
             this.btnImport.Name = "btnImport";
             this.btnImport.Text = "Thêm Từ File Excel";
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // btnExport
             // 
@@ -287,47 +293,6 @@
             this.btnExit.GlobalItem = false;
             this.btnExit.Name = "btnExit";
             this.btnExit.Text = "Đóng";
-            // 
-            // lblBenhAn
-            // 
-            // 
-            // 
-            // 
-            this.lblBenhAn.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblBenhAn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblBenhAn.Font = new System.Drawing.Font("Tahoma", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblBenhAn.ForeColor = System.Drawing.Color.Maroon;
-            this.lblBenhAn.Location = new System.Drawing.Point(1020, 1);
-            this.lblBenhAn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lblBenhAn.Name = "lblBenhAn";
-            this.lblBenhAn.Size = new System.Drawing.Size(329, 58);
-            this.lblBenhAn.TabIndex = 9;
-            this.lblBenhAn.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // DichVuMenuBar
-            // 
-            this.DichVuMenuBar.AntiAlias = true;
-            this.DichVuMenuBar.DockSide = DevComponents.DotNetBar.eDockSide.Top;
-            this.DichVuMenuBar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DichVuMenuBar.IsMaximized = false;
-            this.DichVuMenuBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.DichVuMenu});
-            this.DichVuMenuBar.Location = new System.Drawing.Point(346, 12);
-            this.DichVuMenuBar.Name = "DichVuMenuBar";
-            this.DichVuMenuBar.Size = new System.Drawing.Size(82, 25);
-            this.DichVuMenuBar.Stretch = true;
-            this.DichVuMenuBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.DichVuMenuBar.TabIndex = 224;
-            this.DichVuMenuBar.TabStop = false;
-            // 
-            // DichVuMenu
-            // 
-            this.DichVuMenu.AutoExpandOnClick = true;
-            this.DichVuMenu.Name = "DichVuMenu";
-            this.DichVuMenu.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.labelItem2,
-            this.btnXoa});
-            this.DichVuMenu.Text = "Dịch Vụ";
             // 
             // labelItem2
             // 
@@ -374,14 +339,57 @@
             this.controlContainerItem1.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
             this.controlContainerItem1.Name = "controlContainerItem1";
             // 
+            // DichVuMenu
+            // 
+            this.DichVuMenu.AutoExpandOnClick = true;
+            this.DichVuMenu.Name = "DichVuMenu";
+            this.DichVuMenu.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.labelItem2,
+            this.btnXoa});
+            this.DichVuMenu.Text = "Dịch Vụ";
+            // 
+            // DichVuMenuBar
+            // 
+            this.DichVuMenuBar.AntiAlias = true;
+            this.DichVuMenuBar.DockSide = DevComponents.DotNetBar.eDockSide.Top;
+            this.DichVuMenuBar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DichVuMenuBar.IsMaximized = false;
+            this.DichVuMenuBar.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.DichVuMenu});
+            this.DichVuMenuBar.Location = new System.Drawing.Point(445, 14);
+            this.DichVuMenuBar.Margin = new System.Windows.Forms.Padding(4);
+            this.DichVuMenuBar.Name = "DichVuMenuBar";
+            this.DichVuMenuBar.Size = new System.Drawing.Size(105, 29);
+            this.DichVuMenuBar.Stretch = true;
+            this.DichVuMenuBar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.DichVuMenuBar.TabIndex = 224;
+            this.DichVuMenuBar.TabStop = false;
+            // 
+            // btnDownload
+            // 
+            this.btnDownload.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnDownload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.btnDownload.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.btnDownload.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDownload.Image = global::MediboxAssistant.Properties.Resources.MoveDown_32x32;
+            this.btnDownload.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnDownload.Location = new System.Drawing.Point(449, 1);
+            this.btnDownload.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDownload.Name = "btnDownload";
+            this.btnDownload.Size = new System.Drawing.Size(174, 69);
+            this.btnDownload.TabIndex = 149;
+            this.btnDownload.Text = "Download Image";
+            this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click);
+            // 
             // FormViewChecker
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1350, 690);
+            this.ClientSize = new System.Drawing.Size(1736, 819);
             this.Controls.Add(this.panelEx1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormViewChecker";
-            this.Text = "Danh Sách Thiết Bị";
+            this.Text = "Danh Sách Code Checker";
             this.Load += new System.EventHandler(this.Database_Load);
             this.panelEx1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mListViewData)).EndInit();
@@ -395,17 +403,6 @@
 
         private DevComponents.DotNetBar.PanelEx panelEx1;
         private DevComponents.DotNetBar.Controls.TextBoxX txtSearch;
-        private DevComponents.DotNetBar.PanelEx panelEx3;
-        private DevComponents.DotNetBar.ButtonX btnAdd;
-        private DevComponents.DotNetBar.ButtonX btnRefresh;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
-        private DevComponents.DotNetBar.LabelItem labelItem1;
-        private DevComponents.DotNetBar.ButtonItem btnImport;
-        private DevComponents.DotNetBar.ButtonItem btnExport;
-        private DevComponents.DotNetBar.ButtonItem btnExit;
-        private DevComponents.DotNetBar.LabelX lblBenhAn;
-        private DevComponents.DotNetBar.ContextMenuBar DichVuMenuBar;
-        private DevComponents.DotNetBar.ButtonItem DichVuMenu;
         private DevComponents.DotNetBar.LabelItem labelItem2;
         private DevComponents.DotNetBar.ButtonItem btnXoa;
         private DevComponents.DotNetBar.Controls.CircularProgress DataProgress;
@@ -417,5 +414,16 @@
         private Sanita.Utility.UI.OLVColumn olvColumn3;
         private DevComponents.DotNetBar.ControlContainerItem controlContainerItem1;
         private Sanita.Utility.UI.OLVColumn olvColumn6;
+        private DevComponents.DotNetBar.PanelEx panelEx3;
+        private DevComponents.DotNetBar.ButtonX btnAdd;
+        private DevComponents.DotNetBar.ButtonX btnRefresh;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.LabelItem labelItem1;
+        private DevComponents.DotNetBar.ButtonItem btnImport;
+        private DevComponents.DotNetBar.ButtonItem btnExport;
+        private DevComponents.DotNetBar.ButtonItem btnExit;
+        private DevComponents.DotNetBar.ButtonItem DichVuMenu;
+        private DevComponents.DotNetBar.ContextMenuBar DichVuMenuBar;
+        private DevComponents.DotNetBar.ButtonX btnDownload;
     }
 }

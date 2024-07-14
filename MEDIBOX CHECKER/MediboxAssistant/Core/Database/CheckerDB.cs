@@ -52,7 +52,7 @@ namespace Medibox.Database
             return (MakeChecker(row));
         }
 
-        public Checker GetChecker_CheckerCode(string CheckerCode)
+        public Checker GetCheckerbyCode(string CheckerCode)
         {
             StringBuilder sql = new StringBuilder();
             sql.Append(" SELECT * ");

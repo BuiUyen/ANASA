@@ -28,6 +28,13 @@ namespace Medibox.Presenter
         {
             return CheckerDB.mInstance.GetChecker(CheckerID);
         }
+
+        public static Checker GetCheckerbyCode(string CheckerCode)
+        {
+            return CheckerDB.mInstance.GetCheckerbyCode(CheckerCode);
+        }
+
+
         public static void UpdateChecker(Checker data)
         {
             CheckerDB.mInstance.UpdateChecker(null, null, data);
@@ -43,10 +50,5 @@ namespace Medibox.Presenter
             return CheckerDB.mInstance.DeleteChecker(data);
         }
 
-        public static Checker GetChecker_CheckerCode(string CheckerCode)
-        {
-            return CheckerDB.mInstance.GetChecker_CheckerCode(CheckerCode);
-        }
     }
-
 }

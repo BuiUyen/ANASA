@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Visual Code\\BuiUyen\\GITHUB\\Checker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{32F126D4-6247-442D-97C4-AAE4B94B2C23}|Checker\\Checker.csproj|D:\\Visual Code\\BuiUyen\\GITHUB\\Checker\\checker\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{32F126D4-6247-442D-97C4-AAE4B94B2C23}|Checker\\Checker.csproj|solutionrelative:checker\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32F126D4-6247-442D-97C4-AAE4B94B2C23}|Checker\\Checker.csproj|d:\\visual code\\buiuyen\\github\\checker\\checker\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32F126D4-6247-442D-97C4-AAE4B94B2C23}|Checker\\Checker.csproj|solutionrelative:checker\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32F126D4-6247-442D-97C4-AAE4B94B2C23}|Checker\\Checker.csproj|d:\\visual code\\buiuyen\\github\\checker\\checker\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32F126D4-6247-442D-97C4-AAE4B94B2C23}|Checker\\Checker.csproj|solutionrelative:checker\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32F126D4-6247-442D-97C4-AAE4B94B2C23}|Checker\\Checker.csproj|d:\\visual code\\buiuyen\\github\\checker\\checker\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{32F126D4-6247-442D-97C4-AAE4B94B2C23}|Checker\\Checker.csproj|solutionrelative:checker\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32F126D4-6247-442D-97C4-AAE4B94B2C23}|Checker\\Checker.csproj|D:\\Visual Code\\BuiUyen\\GITHUB\\Checker\\checker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32F126D4-6247-442D-97C4-AAE4B94B2C23}|Checker\\Checker.csproj|solutionrelative:checker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\GITHUB\\Checker\\Checker\\Program.cs",
+              "RelativeDocumentMoniker": "Checker\\Program.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\GITHUB\\Checker\\Checker\\Program.cs",
+              "RelativeToolTip": "Checker\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T15:22:27.861Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\GITHUB\\Checker\\Checker\\Form1.cs",
+              "RelativeDocumentMoniker": "Checker\\Form1.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\GITHUB\\Checker\\Checker\\Form1.cs [Design]",
+              "RelativeToolTip": "Checker\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T14:31:10.048Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form2.Designer.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\GITHUB\\Checker\\Checker\\Form2.Designer.cs",
+              "RelativeDocumentMoniker": "Checker\\Form2.Designer.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\GITHUB\\Checker\\Checker\\Form2.Designer.cs",
+              "RelativeToolTip": "Checker\\Form2.Designer.cs",
+              "ViewState": "AQIAAOwAAAAAAAAAAAAowPMAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T13:34:38.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form2.cs [Design]",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\GITHUB\\Checker\\Checker\\Form2.cs",
+              "RelativeDocumentMoniker": "Checker\\Form2.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\GITHUB\\Checker\\Checker\\Form2.cs [Design]",
+              "RelativeToolTip": "Checker\\Form2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T15:24:29.668Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "D:\\Visual Code\\BuiUyen\\GITHUB\\Checker\\Checker\\Form2.cs",
+              "RelativeDocumentMoniker": "Checker\\Form2.cs",
+              "ToolTip": "D:\\Visual Code\\BuiUyen\\GITHUB\\Checker\\Checker\\Form2.cs",
+              "RelativeToolTip": "Checker\\Form2.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAqwHkAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T15:22:57.815Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

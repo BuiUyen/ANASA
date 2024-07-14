@@ -396,6 +396,18 @@
     <Compile Include="Core\Utility\UtilityListView.cs" />
     <Compile Include="Core\Utility\UtilityUpdateTime.cs" />
     <Compile Include="Core\Utility\UtilityWeb.cs" />
+    <Compile Include="Form\Edit\FormEditXchina2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Edit\FormEditXchina2.designer.cs">
+      <DependentUpon>FormEditXchina2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Edit\FormEditXchina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Edit\FormEditXchina.designer.cs">
+      <DependentUpon>FormEditXchina.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Edit\FormEditImageChecker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -537,6 +549,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Core\Utility\UI\SplashScreen\FormSplashScreen.resx">
       <DependentUpon>FormSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Edit\FormEditXchina2.resx">
+      <DependentUpon>FormEditXchina2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Edit\FormEditXchina.resx">
+      <DependentUpon>FormEditXchina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Edit\FormEditImageChecker.resx">
       <DependentUpon>FormEditImageChecker.cs</DependentUpon>
