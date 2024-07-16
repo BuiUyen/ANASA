@@ -17,11 +17,13 @@ using Medibox.Database;
 using Medibox.Model;
 using Medibox.Presenter;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using Sanita.Utility;
 using Sanita.Utility.ExtendedThread;
 using Sanita.Utility.UI;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Net.WebRequestMethods;
+using static System.Windows.Forms.LinkLabel;
 
 namespace Medibox
 {
@@ -180,11 +182,23 @@ namespace Medibox
         }
 
 
-        string folderPath = @"F:\Xchina";
+        string folderPath = @"E:\Xchina";
         
         private void btnRun_Click(object sender, EventArgs e)
         {
-            foreach(Checker _checker in mListChecker)
+
+            var driverService = ChromeDriverService.CreateDefaultService();
+            driverService.HideCommandPromptWindow = true;
+            var options = new ChromeOptions();
+            //options.AddArgument("--window-position=-32000,-32000"); //an chorme
+            var driver = new ChromeDriver(driverService, options);
+            driver.Navigate().GoToUrl("https://www.google.com/");
+            System.Threading.Thread.Sleep(15000);
+            ((IJavaScriptExecutor)driver).ExecuteScript("window.open();");
+            driver.SwitchTo().Window(driver.WindowHandles.Last());
+
+
+            foreach (Checker _checker in mListChecker)
             {
                 int i = 1;
                 if(_checker.Name == "")
@@ -195,35 +209,56 @@ namespace Medibox
                         {
                             string Alt = _checker.CheckerCode + "_" + i; //tên ảnh
                             string Path = folderPath + @"\" + _checker.CheckerCode;  //đường dẫn thư mục lưu ảnh
-                            try
-                            {
-                                // Kiểm tra nếu thư mục không tồn tại, thì tạo mới
-                                if (!Directory.Exists(Path))
-                                {
-                                    Directory.CreateDirectory(Path);
-                                }
-                                else
-                                {
-                                    //Console.WriteLine("Thư mục đã tồn tại.");
-                                }
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show("Lỗi khi tạo thư mục: " + ex.Message, "Thông Báo");
-                            }
+                            //try
+                            //{
+                            //    // Kiểm tra nếu thư mục không tồn tại, thì tạo mới
+                            //    if (!Directory.Exists(Path))
+                            //    {
+                            //        Directory.CreateDirectory(Path);
+                            //    }
+                            //    else
+                            //    {
+                            //        //Console.WriteLine("Thư mục đã tồn tại.");
+                            //    }
+                            //}
+                            //catch (Exception ex)
+                            //{
+                            //    MessageBox.Show("Lỗi khi tạo thư mục: " + ex.Message, "Thông Báo");
+                            //}
 
                             string link = @"https://img.xchina.biz/photos2/" + _checker.CheckerCode + "/" + i.ToString("0000") + ".jpg";
-                            string savePath = Path + @"\" + Alt + ".jpg";
+                            
 
 
-                            using (WebClient client = new WebClient())
+                            //using (WebClient client = new WebClient())
+                            //{
+                            //    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                            //    client.Headers.Add("user-agent", "Only a test!");
+                            //    client.DownloadFile(link, savePath);
+                            //    System.Threading.Thread.Sleep(1000);
+                            //}
+
+                            driver.Navigate().GoToUrl(link);
+                            System.Threading.Thread.Sleep(1000);
+
+                            string script = @"
+                                            var link = document.createElement('a');
+                                            link.href = arguments[0];
+                                            link.download = '" + Alt + @".jpg';
+                                            document.body.appendChild(link);
+                                            link.click();
+                                            document.body.removeChild(link);
+                                            ";                            
+                            // Thực thi tập lệnh JavaScript để tải hình ảnh xuống
+                            ((IJavaScriptExecutor)driver).ExecuteScript(script, link);
+                            System.Threading.Thread.Sleep(1000);
+
+
+                            string savePath = folderPath + @"\" + _checker.CheckerCode + "_" + (i-3).ToString() + ".jpg";
+                            if (!System.IO.File.Exists(savePath) && i > 60 )
                             {
-                                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-                                client.Headers.Add("User-Agent", "PostmanRuntime/7.26.1");
-                                client.DownloadFile(link, savePath);
-                                System.Threading.Thread.Sleep(1000);
+                                break;
                             }
-                                                        
 
                         }
                         catch (Exception ex)
@@ -235,15 +270,12 @@ namespace Medibox
                         i++;
 
                     }
-                    while (i < 500);
-                    
+                    while (i < 500);                    
                 }
             }          
             
            
 
         }
-        
-
     }
 }
