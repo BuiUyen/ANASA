@@ -183,7 +183,12 @@ namespace Medibox
 
 
         string folderPath = @"E:\Xchina";
-        
+
+        string link_server = @"https://img.xchina.biz/photos/";
+        string link_server1 = @"https://img.xchina.biz/photos1/";
+        string link_server2 = @"https://img.xchina.biz/photos2/";
+
+
         private void btnRun_Click(object sender, EventArgs e)
         {
 
@@ -201,81 +206,98 @@ namespace Medibox
             foreach (Checker _checker in mListChecker)
             {
                 int i = 1;
-                if(_checker.Name == "")
+                
+                if(System.IO.File.Exists(folderPath + @"\" + _checker.CheckerCode + "_1.jpg"))
                 {
-                    do
+                    for(int j = 1; j < 300; j++)
                     {
-                        try
+                        if(!System.IO.File.Exists(folderPath + @"\" + _checker.CheckerCode + "_" + j.ToString() + ".jpg"))
                         {
-                            string Alt = _checker.CheckerCode + "_" + i; //tên ảnh
-                            string Path = folderPath + @"\" + _checker.CheckerCode;  //đường dẫn thư mục lưu ảnh
-                            //try
-                            //{
-                            //    // Kiểm tra nếu thư mục không tồn tại, thì tạo mới
-                            //    if (!Directory.Exists(Path))
-                            //    {
-                            //        Directory.CreateDirectory(Path);
-                            //    }
-                            //    else
-                            //    {
-                            //        //Console.WriteLine("Thư mục đã tồn tại.");
-                            //    }
-                            //}
-                            //catch (Exception ex)
-                            //{
-                            //    MessageBox.Show("Lỗi khi tạo thư mục: " + ex.Message, "Thông Báo");
-                            //}
+                            _checker.Phone = (j-1).ToString();
+                            CheckerPresenter.UpdateChecker(_checker);
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    if (_checker.Phone == "")
+                    {
+                        string _linksever = "";
+                        List<String> mlist = new List<string> { link_server, link_server1, link_server2};
 
-                            string link = @"https://img.xchina.biz/photos2/" + _checker.CheckerCode + "/" + i.ToString("0000") + ".jpg";
-                            
+                        foreach (string item in mlist)
+                        {
+                            _linksever = item;
+                            driver.Navigate().GoToUrl(_linksever + _checker.CheckerCode + "/0001.jpg");
+                            System.Threading.Thread.Sleep(200);
+
+                            DowloadImage(driver, _checker.CheckerCode + "_1", _linksever + _checker.CheckerCode + "/0001.jpg");
+                            System.Threading.Thread.Sleep(3000);
+
+                            if (System.IO.File.Exists(folderPath + @"\" + _checker.CheckerCode + "_1.jpg"))
+                            {
+                                i++;
+                                break;
+                            }
+                        }
+
+                        do
+                        {
+                            try
+                            {
+                                string Alt = _checker.CheckerCode + "_" + i; //tên ảnh                                
+                                string link = _linksever + _checker.CheckerCode + "/" + i.ToString("0000") + ".jpg";//link ảnh
+                                
+                                driver.Navigate().GoToUrl(link);
+                                System.Threading.Thread.Sleep(200);
 
 
-                            //using (WebClient client = new WebClient())
-                            //{
-                            //    ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-                            //    client.Headers.Add("user-agent", "Only a test!");
-                            //    client.DownloadFile(link, savePath);
-                            //    System.Threading.Thread.Sleep(1000);
-                            //}
+                                DowloadImage(driver, Alt, link);
+                                
+                                if (!System.IO.File.Exists(folderPath + @"\" + _checker.CheckerCode + "_" + (i - 24).ToString() + ".jpg") && i > 25)
+                                {
+                                    break;
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Lỗi tải ảnh: " + _checker.CheckerCode, "Thông Báo");
+                                MessageBox.Show(ex.ToString());
+                                break;
+                            }
+                            i++;
+                        }
+                        while (i < 500);
+                    }
+                }
 
-                            driver.Navigate().GoToUrl(link);
-                            System.Threading.Thread.Sleep(1000);
 
-                            string script = @"
-                                            var link = document.createElement('a');
+
+
+            }
+
+                
+            
+
+           
+
+        }
+
+
+        private void DowloadImage (ChromeDriver driver, string Alt, string link)
+        {
+
+            string script = @"              var link = document.createElement('a');
                                             link.href = arguments[0];
                                             link.download = '" + Alt + @".jpg';
                                             document.body.appendChild(link);
                                             link.click();
                                             document.body.removeChild(link);
-                                            ";                            
-                            // Thực thi tập lệnh JavaScript để tải hình ảnh xuống
-                            ((IJavaScriptExecutor)driver).ExecuteScript(script, link);
-                            System.Threading.Thread.Sleep(1000);
-
-
-                            string savePath = folderPath + @"\" + _checker.CheckerCode + "_" + (i-3).ToString() + ".jpg";
-                            if (!System.IO.File.Exists(savePath) && i > 60 )
-                            {
-                                break;
-                            }
-
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Lỗi tải ảnh: " + _checker.CheckerCode, "Thông Báo");
-                            MessageBox.Show(ex.ToString());
-                            break;
-                        }
-                        i++;
-
-                    }
-                    while (i < 500);                    
-                }
-            }          
-            
-           
-
+                                            ";
+            // Thực thi tập lệnh JavaScript để tải hình ảnh xuống
+            ((IJavaScriptExecutor)driver).ExecuteScript(script, link);
+            System.Threading.Thread.Sleep(300);
         }
     }
 }
