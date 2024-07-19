@@ -182,7 +182,7 @@ namespace Medibox
         }
 
 
-        string folderPath = @"E:\Xchina";
+        string folderPath = @"E:\XXX2";
 
         string link_server = @"https://img.xchina.biz/photos/";
         string link_server1 = @"https://img.xchina.biz/photos1/";
@@ -198,7 +198,7 @@ namespace Medibox
             //options.AddArgument("--window-position=-32000,-32000"); //an chorme
             var driver = new ChromeDriver(driverService, options);
             driver.Navigate().GoToUrl("https://www.google.com/");
-            System.Threading.Thread.Sleep(15000);
+            System.Threading.Thread.Sleep(1000);
             ((IJavaScriptExecutor)driver).ExecuteScript("window.open();");
             driver.SwitchTo().Window(driver.WindowHandles.Last());
 
@@ -206,34 +206,34 @@ namespace Medibox
             foreach (Checker _checker in mListChecker)
             {
                 int i = 1;
-                
-                if(System.IO.File.Exists(folderPath + @"\" + _checker.CheckerCode + "_1.jpg"))
+
+                //if (System.IO.File.Exists(folderPath + @"\" + _checker.CheckerCode + "_1.jpg"))
+                //{
+                //    for (int j = 1; j < 1000; j++)
+                //    {
+                //        if (!System.IO.File.Exists(folderPath + @"\" + _checker.CheckerCode + "_" + j.ToString() + ".jpg"))
+                //        {
+                //            _checker.Phone = (j - 1).ToString();
+                //            CheckerPresenter.UpdateChecker(_checker);
+                //            break;
+                //        }
+                //    }
+                //}
+                //else
                 {
-                    for(int j = 1; j < 300; j++)
-                    {
-                        if(!System.IO.File.Exists(folderPath + @"\" + _checker.CheckerCode + "_" + j.ToString() + ".jpg"))
-                        {
-                            _checker.Phone = (j-1).ToString();
-                            CheckerPresenter.UpdateChecker(_checker);
-                            break;
-                        }
-                    }
-                }
-                else
-                {
-                    if (_checker.Phone == "")
+                    if (_checker.Phone == "" || _checker.Phone == "1")
                     {
                         string _linksever = "";
-                        List<String> mlist = new List<string> { link_server, link_server1, link_server2};
+                        List<String> mlist = new List<string> { link_server, link_server1, link_server2 };
 
                         foreach (string item in mlist)
                         {
                             _linksever = item;
                             driver.Navigate().GoToUrl(_linksever + _checker.CheckerCode + "/0001.jpg");
-                            System.Threading.Thread.Sleep(200);
+                            System.Threading.Thread.Sleep(1000);
 
                             DowloadImage(driver, _checker.CheckerCode + "_1", _linksever + _checker.CheckerCode + "/0001.jpg");
-                            System.Threading.Thread.Sleep(3000);
+                            System.Threading.Thread.Sleep(5000);
 
                             if (System.IO.File.Exists(folderPath + @"\" + _checker.CheckerCode + "_1.jpg"))
                             {
@@ -248,17 +248,17 @@ namespace Medibox
                             {
                                 string Alt = _checker.CheckerCode + "_" + i; //tên ảnh                                
                                 string link = _linksever + _checker.CheckerCode + "/" + i.ToString("0000") + ".jpg";//link ảnh
-                                
+
                                 driver.Navigate().GoToUrl(link);
                                 System.Threading.Thread.Sleep(200);
 
 
                                 DowloadImage(driver, Alt, link);
-                                
-                                if (!System.IO.File.Exists(folderPath + @"\" + _checker.CheckerCode + "_" + (i - 24).ToString() + ".jpg") && i > 25)
-                                {
-                                    break;
-                                }
+
+                                //if (!System.IO.File.Exists(folderPath + @"\" + _checker.CheckerCode + "_" + (i - 24).ToString() + ".jpg") && i > 25)
+                                //{
+                                //    break;
+                                //}
                             }
                             catch (Exception ex)
                             {
@@ -268,16 +268,10 @@ namespace Medibox
                             }
                             i++;
                         }
-                        while (i < 500);
+                        while (i < 150);
                     }
                 }
-
-
-
-
-            }
-
-                
+            }              
             
 
            
@@ -298,6 +292,12 @@ namespace Medibox
             // Thực thi tập lệnh JavaScript để tải hình ảnh xuống
             ((IJavaScriptExecutor)driver).ExecuteScript(script, link);
             System.Threading.Thread.Sleep(300);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            label1.Text = mListChecker.FirstOrDefault(x =>x.CheckerCode == textBox1.Text).Phone.ToString();
+
         }
     }
 }

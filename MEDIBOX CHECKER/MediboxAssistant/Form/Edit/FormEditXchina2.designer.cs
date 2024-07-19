@@ -32,6 +32,9 @@
             this.btnSave = new DevComponents.DotNetBar.ButtonX();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.btnRun = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelEx2.SuspendLayout();
             this.panelEx1.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +81,9 @@
             // 
             this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.panelEx1.Controls.Add(this.label1);
+            this.panelEx1.Controls.Add(this.button1);
+            this.panelEx1.Controls.Add(this.textBox1);
             this.panelEx1.Controls.Add(this.btnRun);
             this.panelEx1.Controls.Add(this.panelEx2);
             this.panelEx1.DisabledBackColor = System.Drawing.Color.Empty;
@@ -104,6 +110,32 @@
             this.btnRun.UseVisualStyleBackColor = true;
             this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(80, 198);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(255, 27);
+            this.textBox1.TabIndex = 111;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(378, 191);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 45);
+            this.button1.TabIndex = 112;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(499, 204);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 21);
+            this.label1.TabIndex = 113;
+            this.label1.Text = "label1";
+            // 
             // FormEditXchina2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -116,6 +148,7 @@
             this.Load += new System.EventHandler(this.Database_Load);
             this.panelEx2.ResumeLayout(false);
             this.panelEx1.ResumeLayout(false);
+            this.panelEx1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -125,5 +158,8 @@
         private DevComponents.DotNetBar.ButtonX btnSave;
         private DevComponents.DotNetBar.PanelEx panelEx1;
         private System.Windows.Forms.Button btnRun;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
