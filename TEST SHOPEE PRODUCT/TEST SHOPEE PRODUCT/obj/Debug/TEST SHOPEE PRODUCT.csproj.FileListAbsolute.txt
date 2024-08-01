@@ -1,0 +1,18 @@
+C:\Users\huuuy\Desktop\ANASA\TEST SHOPEE PRODUCT\TEST SHOPEE PRODUCT\bin\Debug\selenium-manager\linux\selenium-manager
+C:\Users\huuuy\Desktop\ANASA\TEST SHOPEE PRODUCT\TEST SHOPEE PRODUCT\bin\Debug\selenium-manager\macos\selenium-manager
+C:\Users\huuuy\Desktop\ANASA\TEST SHOPEE PRODUCT\TEST SHOPEE PRODUCT\bin\Debug\selenium-manager\windows\selenium-manager.exe
+C:\Users\huuuy\Desktop\ANASA\TEST SHOPEE PRODUCT\TEST SHOPEE PRODUCT\bin\Debug\TEST SHOPEE PRODUCT.exe.config
+C:\Users\huuuy\Desktop\ANASA\TEST SHOPEE PRODUCT\TEST SHOPEE PRODUCT\bin\Debug\TEST SHOPEE PRODUCT.exe
+C:\Users\huuuy\Desktop\ANASA\TEST SHOPEE PRODUCT\TEST SHOPEE PRODUCT\bin\Debug\TEST SHOPEE PRODUCT.pdb
+C:\Users\huuuy\Desktop\ANASA\TEST SHOPEE PRODUCT\TEST SHOPEE PRODUCT\bin\Debug\Newtonsoft.Json.dll
+C:\Users\huuuy\Desktop\ANASA\TEST SHOPEE PRODUCT\TEST SHOPEE PRODUCT\bin\Debug\WebDriver.dll
+C:\Users\huuuy\Desktop\ANASA\TEST SHOPEE PRODUCT\TEST SHOPEE PRODUCT\bin\Debug\Newtonsoft.Json.xml
+C:\Users\huuuy\Desktop\ANASA\TEST SHOPEE PRODUCT\TEST SHOPEE PRODUCT\bin\Debug\WebDriver.xml
+C:\Users\huuuy\Desktop\ANASA\TEST SHOPEE PRODUCT\TEST SHOPEE PRODUCT\obj\Debug\TEST SHOPEE PRODUCT.csproj.AssemblyReference.cache
+C:\Users\huuuy\Desktop\ANASA\TEST SHOPEE PRODUCT\TEST SHOPEE PRODUCT\obj\Debug\TEST_SHOPEE_PRODUCT.Form1.resources
+C:\Users\huuuy\Desktop\ANASA\TEST SHOPEE PRODUCT\TEST SHOPEE PRODUCT\obj\Debug\TEST_SHOPEE_PRODUCT.Properties.Resources.resources
+C:\Users\huuuy\Desktop\ANASA\TEST SHOPEE PRODUCT\TEST SHOPEE PRODUCT\obj\Debug\TEST SHOPEE PRODUCT.csproj.GenerateResource.cache
+C:\Users\huuuy\Desktop\ANASA\TEST SHOPEE PRODUCT\TEST SHOPEE PRODUCT\obj\Debug\TEST SHOPEE PRODUCT.csproj.CoreCompileInputs.cache
+C:\Users\huuuy\Desktop\ANASA\TEST SHOPEE PRODUCT\TEST SHOPEE PRODUCT\obj\Debug\TEST SHOPEE PRODUCT.csproj.CopyComplete
+C:\Users\huuuy\Desktop\ANASA\TEST SHOPEE PRODUCT\TEST SHOPEE PRODUCT\obj\Debug\TEST SHOPEE PRODUCT.exe
+C:\Users\huuuy\Desktop\ANASA\TEST SHOPEE PRODUCT\TEST SHOPEE PRODUCT\obj\Debug\TEST SHOPEE PRODUCT.pdb

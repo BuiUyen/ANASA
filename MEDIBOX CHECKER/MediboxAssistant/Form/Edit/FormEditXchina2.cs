@@ -39,7 +39,7 @@ namespace Medibox
         private FormProgress mProgress = new FormProgress();
         private ExBackgroundWorker mThread;
         private IList<Checker> mListChecker = new List<Checker>();
-        
+
 
         private enum ProcessingType
         {
@@ -64,6 +64,13 @@ namespace Medibox
             mChecker = _mChecker ?? new Checker();
             mListChecker = _mListChecker;
 
+            int tong = 0;
+            foreach (Checker checker in mListChecker)
+            {
+                Int32.TryParse(checker.Name, out int t);
+                tong = tong + t;
+            }
+            label1.Text = tong.ToString();
         }
 
         #region Worker thread
@@ -150,7 +157,7 @@ namespace Medibox
 
         #endregion
 
-        
+
 
         private void Database_Load(object sender, EventArgs e)
         {
@@ -182,7 +189,7 @@ namespace Medibox
         }
 
 
-        string folderPath = @"E:\XXX2";
+        string folderPath = @"F:\XXX3";
 
         string link_server = @"https://img.xchina.biz/photos/";
         string link_server1 = @"https://img.xchina.biz/photos1/";
@@ -198,7 +205,7 @@ namespace Medibox
             //options.AddArgument("--window-position=-32000,-32000"); //an chorme
             var driver = new ChromeDriver(driverService, options);
             driver.Navigate().GoToUrl("https://www.google.com/");
-            System.Threading.Thread.Sleep(1000);
+            System.Threading.Thread.Sleep(15000);
             ((IJavaScriptExecutor)driver).ExecuteScript("window.open();");
             driver.SwitchTo().Window(driver.WindowHandles.Last());
 
@@ -206,22 +213,8 @@ namespace Medibox
             foreach (Checker _checker in mListChecker)
             {
                 int i = 1;
-
-                //if (System.IO.File.Exists(folderPath + @"\" + _checker.CheckerCode + "_1.jpg"))
-                //{
-                //    for (int j = 1; j < 1000; j++)
-                //    {
-                //        if (!System.IO.File.Exists(folderPath + @"\" + _checker.CheckerCode + "_" + j.ToString() + ".jpg"))
-                //        {
-                //            _checker.Phone = (j - 1).ToString();
-                //            CheckerPresenter.UpdateChecker(_checker);
-                //            break;
-                //        }
-                //    }
-                //}
-                //else
                 {
-                    if (_checker.Phone == "" || _checker.Phone == "1")
+                    if (_checker.Name == "0")
                     {
                         string _linksever = "";
                         List<String> mlist = new List<string> { link_server, link_server1, link_server2 };
@@ -230,56 +223,77 @@ namespace Medibox
                         {
                             _linksever = item;
                             driver.Navigate().GoToUrl(_linksever + _checker.CheckerCode + "/0001.jpg");
-                            System.Threading.Thread.Sleep(1000);
+                            System.Threading.Thread.Sleep(200);
 
                             DowloadImage(driver, _checker.CheckerCode + "_1", _linksever + _checker.CheckerCode + "/0001.jpg");
                             System.Threading.Thread.Sleep(5000);
 
                             if (System.IO.File.Exists(folderPath + @"\" + _checker.CheckerCode + "_1.jpg"))
                             {
-                                i++;
                                 break;
                             }
                         }
 
-                        do
+                        if (System.IO.File.Exists(folderPath + @"\" + _checker.CheckerCode + "_1.jpg"))
                         {
-                            try
+                            int dem = 1;
+                            i = 2;
+                            do
                             {
-                                string Alt = _checker.CheckerCode + "_" + i; //tên ảnh                                
-                                string link = _linksever + _checker.CheckerCode + "/" + i.ToString("0000") + ".jpg";//link ảnh
+                                try
+                                {
+                                    string Alt = _checker.CheckerCode + "_" + i; //tên ảnh                                
+                                    string link = _linksever + _checker.CheckerCode + "/" + i.ToString("0000") + ".jpg";//link ảnh
 
-                                driver.Navigate().GoToUrl(link);
-                                System.Threading.Thread.Sleep(200);
+                                    driver.Navigate().GoToUrl(link);
+                                    System.Threading.Thread.Sleep(200);
 
+                                    DowloadImage(driver, Alt, link);
 
-                                DowloadImage(driver, Alt, link);
+                                    if(dem == 25)
+                                    {
+                                        dem = 1;
+                                        System.Threading.Thread.Sleep(3000);
+                                        if (!System.IO.File.Exists(folderPath + @"\" + _checker.CheckerCode + "_" + (i - 25).ToString() + ".jpg"))
+                                        {
+                                            break;
+                                        }
 
-                                //if (!System.IO.File.Exists(folderPath + @"\" + _checker.CheckerCode + "_" + (i - 24).ToString() + ".jpg") && i > 25)
-                                //{
-                                //    break;
-                                //}
+                                    }
+                                    dem++;
+
+                                    
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show("Lỗi tải ảnh: " + _checker.CheckerCode, "Thông Báo");
+                                    MessageBox.Show(ex.ToString());
+                                    break;
+                                }
+                                i++;
                             }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show("Lỗi tải ảnh: " + _checker.CheckerCode, "Thông Báo");
-                                MessageBox.Show(ex.ToString());
-                                break;
-                            }
-                            i++;
+                            while (i < 1500);
+                            System.Threading.Thread.Sleep(5000);
                         }
-                        while (i < 150);
+
+                        else
+                        {
+                            _checker.Phone = "0";
+                            CheckerPresenter.UpdateChecker(_checker);
+                        }
+
+
+
                     }
                 }
-            }              
-            
+            }
 
-           
+
+
 
         }
 
-
-        private void DowloadImage (ChromeDriver driver, string Alt, string link)
+        private void DowloadImage(ChromeDriver driver, string Alt, string link)
         {
 
             string script = @"              var link = document.createElement('a');
@@ -291,12 +305,82 @@ namespace Medibox
                                             ";
             // Thực thi tập lệnh JavaScript để tải hình ảnh xuống
             ((IJavaScriptExecutor)driver).ExecuteScript(script, link);
-            System.Threading.Thread.Sleep(300);
+            System.Threading.Thread.Sleep(800);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label1.Text = mListChecker.FirstOrDefault(x =>x.CheckerCode == textBox1.Text).Phone.ToString();
+            label1.Text = mListChecker.FirstOrDefault(x => x.CheckerCode == textBox1.Text).Phone.ToString();
+
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            foreach (Checker _checker in mListChecker)
+            {                
+                if (System.IO.File.Exists(@"F:\Xchina\" + _checker.CheckerCode + "_1.jpg"))
+                {
+                    int dem = 1;
+                    for (int j = 2; j < 3000; j++)
+                    {
+                        if (System.IO.File.Exists(@"F:\Xchina\" + _checker.CheckerCode + "_" + j.ToString() + ".jpg"))
+                        {
+                            dem++;
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    _checker.Name = dem.ToString();
+                    CheckerPresenter.UpdateChecker(_checker);
+                }
+                else
+                {
+                    _checker.Name = "0";
+                    CheckerPresenter.UpdateChecker(_checker);
+                }
+
+            }
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            // Đường dẫn tới thư mục chứa profile của Chrome
+            string userProfile = @"C:\Users\huuuy\AppData\Local\Google\Chrome\User Data";
+
+            // Tên của profile bạn muốn sử dụng
+            //string profileName = "Default"; 
+            string profileName = "Profile 2";
+
+            // Cấu hình ChromeOptions để sử dụng profile đã lưu
+            var options = new ChromeOptions();
+            options.AddArgument($"--user-data-dir={userProfile}");
+            options.AddArgument($"--profile-directory={profileName}");
+
+            // Thay đổi User-Agent
+            options.AddArgument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36");
+
+            // Thêm các cờ tùy chọn để tránh bị phát hiện
+            options.AddArgument("--disable-blink-features=AutomationControlled");
+            options.AddArgument("--no-sandbox");
+            options.AddArgument("--disable-dev-shm-usage");
+
+            // Khởi động Chrome với cấu hình đã thiết lập
+            IWebDriver driver = new ChromeDriver(options);
+
+            // Ẩn thuộc tính webdriver
+            ((IJavaScriptExecutor)driver).ExecuteScript("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})");
+
+            // Mở trang web bất kỳ
+            driver.Navigate().GoToUrl("https://www.google.com");
+
+            // Giữ trình duyệt mở để bạn có thể xem kết quả
+            //Console.WriteLine("Press any key to close the browser...");
+            //Console.ReadKey();
+
+            // Đóng trình duyệt
+            //driver.Quit();
 
         }
     }

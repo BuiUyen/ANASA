@@ -31,10 +31,12 @@
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
             this.btnSave = new DevComponents.DotNetBar.ButtonX();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-            this.btnRun = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCheck = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnRun = new System.Windows.Forms.Button();
+            this.btnTest = new System.Windows.Forms.Button();
             this.panelEx2.SuspendLayout();
             this.panelEx1.SuspendLayout();
             this.SuspendLayout();
@@ -81,6 +83,8 @@
             // 
             this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.panelEx1.Controls.Add(this.btnTest);
+            this.panelEx1.Controls.Add(this.btnCheck);
             this.panelEx1.Controls.Add(this.label1);
             this.panelEx1.Controls.Add(this.button1);
             this.panelEx1.Controls.Add(this.textBox1);
@@ -100,26 +104,28 @@
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 32;
             // 
-            // btnRun
+            // btnCheck
             // 
-            this.btnRun.Location = new System.Drawing.Point(36, 33);
-            this.btnRun.Name = "btnRun";
-            this.btnRun.Size = new System.Drawing.Size(166, 61);
-            this.btnRun.TabIndex = 107;
-            this.btnRun.Text = "button1";
-            this.btnRun.UseVisualStyleBackColor = true;
-            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
+            this.btnCheck.Location = new System.Drawing.Point(468, 33);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(202, 65);
+            this.btnCheck.TabIndex = 117;
+            this.btnCheck.Text = "CHECK";
+            this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
-            // textBox1
+            // label1
             // 
-            this.textBox1.Location = new System.Drawing.Point(80, 198);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(255, 27);
-            this.textBox1.TabIndex = 111;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(429, 128);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 21);
+            this.label1.TabIndex = 113;
+            this.label1.Text = "label1";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(378, 191);
+            this.button1.Location = new System.Drawing.Point(328, 118);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 45);
             this.button1.TabIndex = 112;
@@ -127,14 +133,32 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label1
+            // textBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(499, 204);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 21);
-            this.label1.TabIndex = 113;
-            this.label1.Text = "label1";
+            this.textBox1.Location = new System.Drawing.Point(44, 128);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(255, 27);
+            this.textBox1.TabIndex = 111;
+            // 
+            // btnRun
+            // 
+            this.btnRun.Location = new System.Drawing.Point(44, 33);
+            this.btnRun.Name = "btnRun";
+            this.btnRun.Size = new System.Drawing.Size(166, 61);
+            this.btnRun.TabIndex = 107;
+            this.btnRun.Text = "button1";
+            this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
+            // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(93, 338);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(75, 62);
+            this.btnTest.TabIndex = 121;
+            this.btnTest.Text = "Test";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
             // FormEditXchina2
             // 
@@ -161,5 +185,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnCheck;
+        private System.Windows.Forms.Button btnTest;
     }
 }
