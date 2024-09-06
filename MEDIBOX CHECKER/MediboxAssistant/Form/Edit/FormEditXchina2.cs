@@ -189,7 +189,7 @@ namespace Medibox
         }
 
 
-        string folderPath = @"F:\XXX3";
+        string folderPath = @"E:\XXX3";
 
         string link_server = @"https://img.xchina.biz/photos/";
         string link_server1 = @"https://img.xchina.biz/photos1/";

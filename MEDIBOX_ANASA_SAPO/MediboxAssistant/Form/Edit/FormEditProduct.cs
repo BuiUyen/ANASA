@@ -213,7 +213,7 @@ namespace Medibox
                 options.AddArgument("headless");
 
                 driver = new ChromeDriver(driverService, options);
-                driver.Navigate().GoToUrl("https://anasa.mysapogo.com/");
+                driver.Navigate().GoToUrl("https://macthiyen.mysapogo.com/");
                 System.Threading.Thread.Sleep(3000);
                 driver.FindElementById("username").SendKeys("0327006111");
                 driver.FindElementById("password").SendKeys("@Uyen23071998");
@@ -225,7 +225,7 @@ namespace Medibox
                 for (int i = 0; i < 500; i++)
                 {
                     stt = i;
-                    driver.Navigate().GoToUrl("https://anasa.mysapogo.com/admin/products.json?page=" + i.ToString());
+                    driver.Navigate().GoToUrl("https://macthiyen.mysapogo.com/admin/products.json?page=" + i.ToString());
                     var todo = driver.FindElement(By.TagName("Body")).Text;
                     Root _root = JsonConvert.DeserializeObject<Root>(todo);
 

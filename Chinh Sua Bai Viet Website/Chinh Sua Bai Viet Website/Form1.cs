@@ -562,6 +562,7 @@ namespace Chinh_Sua_Bai_Viet_Website
             app.Quit();
         }
 
+
         private void btnXepAnh_Click(object sender, EventArgs e)
         {
             mListXepAnh = new List<LinhKien>();
@@ -590,7 +591,7 @@ namespace Chinh_Sua_Bai_Viet_Website
                     else
                     {
                         string ID = mList_Goc[stt].ID;
-                        if(mListKetQua.FirstOrDefault(v => v.ID == ID) == null)
+                        //if(mListKetQua.FirstOrDefault(v => v.ID == ID) == null)
                         {
                             LinhKien lk = mList.FirstOrDefault(v => v.ID == ID);
                             //foreach (LinhKien phanloai in lk.mListPhanLoai)
@@ -600,12 +601,15 @@ namespace Chinh_Sua_Bai_Viet_Website
                             //    mListKetQua.Add(phanloai);
                             //}
 
-                            lk.SKU = text;
-                            mListKetQua.Add(lk);
+                            _linhkien = lk;
+
+
+                            mListKetQua.Add(_linhkien);                            
+
                         }  
 
 
-                    }
+                    }                    
                 }                
             }
 
@@ -638,7 +642,7 @@ namespace Chinh_Sua_Bai_Viet_Website
                 }
                 dataGridViewKetQua.Rows[n].Cells[1].Value = sp.MaNganhSenDo;
                 dataGridViewKetQua.Rows[n].Cells[2].Value = sp.TenSanPham;
-                dataGridViewKetQua.Rows[n].Cells[3].Value = sp.SKU;
+                dataGridViewKetQua.Rows[n].Cells[3].Value = sp.MaVach;
                 string tatcaanh = "";
                 foreach (string anh in sp.mListAnh)
                 {

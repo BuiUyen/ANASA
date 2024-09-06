@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.printProgress = new DevComponents.DotNetBar.Controls.ProgressBarX();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.labelTEXT = new System.Windows.Forms.Label();
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
             this.btnSave = new DevComponents.DotNetBar.ButtonX();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.printProgress = new DevComponents.DotNetBar.Controls.ProgressBarX();
-            this.txtStatus = new System.Windows.Forms.TextBox();
             this.panelEx1.SuspendLayout();
             this.panelEx2.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +61,33 @@
             this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 32;
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.Location = new System.Drawing.Point(23, 231);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(100, 27);
+            this.txtStatus.TabIndex = 111;
+            // 
+            // printProgress
+            // 
+            // 
+            // 
+            // 
+            this.printProgress.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.printProgress.Location = new System.Drawing.Point(41, 184);
+            this.printProgress.Margin = new System.Windows.Forms.Padding(4);
+            this.printProgress.Name = "printProgress";
+            this.printProgress.Size = new System.Drawing.Size(502, 27);
+            this.printProgress.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.printProgress.TabIndex = 110;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(75, 106);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(429, 59);
+            this.progressBar1.TabIndex = 109;
             // 
             // labelTEXT
             // 
@@ -110,33 +137,6 @@
             this.btnSave.TabIndex = 100;
             this.btnSave.Text = "Lưu";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(123, 178);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(429, 59);
-            this.progressBar1.TabIndex = 109;
-            // 
-            // printProgress
-            // 
-            // 
-            // 
-            // 
-            this.printProgress.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.printProgress.Location = new System.Drawing.Point(50, 321);
-            this.printProgress.Margin = new System.Windows.Forms.Padding(4);
-            this.printProgress.Name = "printProgress";
-            this.printProgress.Size = new System.Drawing.Size(502, 27);
-            this.printProgress.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.printProgress.TabIndex = 110;
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Location = new System.Drawing.Point(358, 426);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(100, 27);
-            this.txtStatus.TabIndex = 111;
             // 
             // FormEditProduct
             // 

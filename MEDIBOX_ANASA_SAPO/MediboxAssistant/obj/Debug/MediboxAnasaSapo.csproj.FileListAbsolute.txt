@@ -155,3 +155,4 @@ D:\Visual Code\BuiUyen\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\obj\Debug\Medib
 D:\Visual Code\BuiUyen\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\obj\Debug\MediboxA.29F13639.Up2Date
 D:\Visual Code\BuiUyen\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\obj\Debug\MediboxAssistant.exe
 D:\Visual Code\BuiUyen\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\obj\Debug\MediboxAssistant.pdb
+C:\Users\huuuy\Desktop\ANASA\MEDIBOX_ANASA_SAPO\MediboxAssistant\obj\Debug\Medibox.FormEditImage.resources

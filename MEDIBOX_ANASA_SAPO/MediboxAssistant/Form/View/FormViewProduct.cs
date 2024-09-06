@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Windows.Forms;
 using Medibox.Model;
 using Medibox.Presenter;
@@ -19,6 +21,7 @@ namespace Medibox
         private ExBackgroundWorker mThread;
 
         private IList<Product> mListProduct = new List<Product>();
+        private IList<Image> mListImage = new List<Image>();
 
 
         private enum ProcessingType
@@ -206,6 +209,52 @@ namespace Medibox
                     ((sender as Control).Location.X + (sender as Control).Width / 2 - DataProgress.Width / 2),
                     ((sender as Control).Location.Y + (sender as Control).Height / 2 - DataProgress.Height / 2)
                     );
+            }
+        }
+
+        private void btnImage_Click(object sender, EventArgs e)
+        {
+            mListImage = ImagePresenter.GetImages();
+
+            foreach (Image image in mListImage)
+            {
+                Product pro = ProductPresenter.GetProductbyID(image.product_id);
+                if (pro != null)
+                {
+                    if (!Directory.Exists(@"E:\MACTHIYEN\" + pro.name))
+                    {
+                        Directory.CreateDirectory(@"E:\MACTHIYEN\" + pro.name);
+                    }
+
+                    string filePath = Path.Combine(@"E:\MACTHIYEN\" + pro.name, image.file_name);
+
+                    using (WebClient client = new WebClient())
+                    {
+                        try
+                        {
+                            client.DownloadFile(new Uri(image.full_path), filePath);
+                            Console.WriteLine("Ảnh đã được tải về và lưu tại: " + filePath);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Có lỗi xảy ra: " + ex.Message);
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+        private void btnImage2_Click(object sender, EventArgs e)
+        {
+            using (FormEditImage form = new FormEditImage(null, null))
+            {
+                if (form.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    DoRefresh();
+                }
             }
         }
     }

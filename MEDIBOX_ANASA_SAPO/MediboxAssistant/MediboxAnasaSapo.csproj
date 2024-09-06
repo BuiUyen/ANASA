@@ -411,6 +411,12 @@
     <Compile Include="Core\Utility\UtilityListView.cs" />
     <Compile Include="Core\Utility\UtilityUpdateTime.cs" />
     <Compile Include="Core\Utility\UtilityWeb.cs" />
+    <Compile Include="Form\Edit\FormEditImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Edit\FormEditImage.designer.cs">
+      <DependentUpon>FormEditImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Edit\FormEditProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -539,6 +545,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Core\Utility\UI\SplashScreen\FormSplashScreen.resx">
       <DependentUpon>FormSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Edit\FormEditImage.resx">
+      <DependentUpon>FormEditImage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Edit\FormEditProduct.resx">
       <DependentUpon>FormEditProduct.cs</DependentUpon>

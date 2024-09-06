@@ -1,0 +1,55 @@
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\SCAN QR CAMERA.exe.config
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\SCAN QR CAMERA.exe
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\SCAN QR CAMERA.pdb
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\Emgu.CV.Bitmap.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\Emgu.CV.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.Buffers.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.Drawing.Common.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.Memory.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.Numerics.Vectors.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.Text.Encodings.Web.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.Text.Json.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.ValueTuple.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\ZedGraph.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\zxing.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\zxing.presentation.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\Emgu.CV.xml
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\Emgu.CV.Bitmap.xml
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.Buffers.xml
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.Drawing.Common.pdb
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.Drawing.Common.xml
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.Memory.xml
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.Numerics.Vectors.xml
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.Text.Encodings.Web.xml
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.Text.Json.xml
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\System.ValueTuple.xml
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\ZedGraph.xml
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\zxing.xml
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\zxing.presentation.xml
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\de\ZedGraph.resources.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\es\ZedGraph.resources.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\fr\ZedGraph.resources.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\hu\ZedGraph.resources.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\it\ZedGraph.resources.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\ja\ZedGraph.resources.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\pt\ZedGraph.resources.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\ru\ZedGraph.resources.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\sk\ZedGraph.resources.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\sv\ZedGraph.resources.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\tr\ZedGraph.resources.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\bin\x86\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\obj\x86\Debug\SCAN QR CAMERA.csproj.AssemblyReference.cache
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\obj\x86\Debug\SCAN_QR_CAMERA.Form1.resources
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\obj\x86\Debug\SCAN_QR_CAMERA.Properties.Resources.resources
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\obj\x86\Debug\SCAN QR CAMERA.csproj.GenerateResource.cache
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\obj\x86\Debug\SCAN QR CAMERA.csproj.CoreCompileInputs.cache
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\obj\x86\Debug\SCAN QR CAMERA.csproj.CopyComplete
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\obj\x86\Debug\SCAN QR CAMERA.exe
+C:\Users\huuuy\Desktop\ANASA\SCAN QR CAMERA\SCAN QR CAMERA\obj\x86\Debug\SCAN QR CAMERA.pdb

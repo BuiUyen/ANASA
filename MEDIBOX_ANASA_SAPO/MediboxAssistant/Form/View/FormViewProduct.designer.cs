@@ -41,6 +41,8 @@
             this.olvColumn8 = ((Sanita.Utility.UI.OLVColumn)(new Sanita.Utility.UI.OLVColumn()));
             this.txtSearch = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.panelEx3 = new DevComponents.DotNetBar.PanelEx();
+            this.btnImage2 = new DevComponents.DotNetBar.ButtonX();
+            this.btnImage = new DevComponents.DotNetBar.ButtonX();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxCountProduct = new System.Windows.Forms.TextBox();
@@ -223,6 +225,8 @@
             // 
             this.panelEx3.CanvasColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.panelEx3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx3.Controls.Add(this.btnImage2);
+            this.panelEx3.Controls.Add(this.btnImage);
             this.panelEx3.Controls.Add(this.label2);
             this.panelEx3.Controls.Add(this.label1);
             this.panelEx3.Controls.Add(this.tbxCountProduct);
@@ -239,13 +243,54 @@
             this.panelEx3.Padding = new System.Windows.Forms.Padding(1);
             this.panelEx3.Size = new System.Drawing.Size(1736, 71);
             this.panelEx3.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.panelEx3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.panelEx3.Style.BackColor2.Color = System.Drawing.SystemColors.Control;
             this.panelEx3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
             this.panelEx3.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
             this.panelEx3.Style.BorderSide = DevComponents.DotNetBar.eBorderSide.Top;
             this.panelEx3.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelEx3.Style.GradientAngle = 90;
+            this.panelEx3.StyleMouseDown.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(151)))), ((int)(((byte)(60)))));
+            this.panelEx3.StyleMouseDown.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(94)))));
+            this.panelEx3.StyleMouseDown.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(140)))), ((int)(((byte)(60)))));
+            this.panelEx3.StyleMouseDown.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
+            this.panelEx3.StyleMouseOver.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(204)))));
+            this.panelEx3.StyleMouseOver.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(117)))));
+            this.panelEx3.StyleMouseOver.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(189)))), ((int)(((byte)(105)))));
+            this.panelEx3.StyleMouseOver.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(46)))));
             this.panelEx3.TabIndex = 220;
+            // 
+            // btnImage2
+            // 
+            this.btnImage2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnImage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.btnImage2.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.btnImage2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnImage2.Image = global::MediboxAssistant.Properties.Resources.Edit_32x32;
+            this.btnImage2.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnImage2.Location = new System.Drawing.Point(334, 1);
+            this.btnImage2.Margin = new System.Windows.Forms.Padding(4);
+            this.btnImage2.Name = "btnImage2";
+            this.btnImage2.Size = new System.Drawing.Size(109, 69);
+            this.btnImage2.TabIndex = 229;
+            this.btnImage2.Text = "Lấy Link Ảnh";
+            this.btnImage2.Click += new System.EventHandler(this.btnImage2_Click);
+            // 
+            // btnImage
+            // 
+            this.btnImage.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.btnImage.ColorTable = DevComponents.DotNetBar.eButtonColor.Flat;
+            this.btnImage.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnImage.Image = global::MediboxAssistant.Properties.Resources.Edit_32x32;
+            this.btnImage.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnImage.Location = new System.Drawing.Point(244, 1);
+            this.btnImage.Margin = new System.Windows.Forms.Padding(4);
+            this.btnImage.Name = "btnImage";
+            this.btnImage.Size = new System.Drawing.Size(90, 69);
+            this.btnImage.TabIndex = 228;
+            this.btnImage.Text = "Xử Lý Ảnh";
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
             // 
             // label2
             // 
@@ -494,5 +539,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbxCountProduct;
         private Sanita.Utility.UI.OLVColumn olvColumn9;
+        private DevComponents.DotNetBar.ButtonX btnImage;
+        private DevComponents.DotNetBar.ButtonX btnImage2;
     }
 }
