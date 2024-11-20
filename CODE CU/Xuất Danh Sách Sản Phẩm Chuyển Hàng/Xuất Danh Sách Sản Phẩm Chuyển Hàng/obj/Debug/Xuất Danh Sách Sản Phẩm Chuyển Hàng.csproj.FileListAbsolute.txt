@@ -32,3 +32,20 @@ C:\Users\huuuy\Desktop\GITHUB\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xu�
 C:\Users\huuuy\Desktop\GITHUB\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\obj\Debug\Xuất Danh Sách Sản Phẩm Chuyển Hàng.csproj.CopyComplete
 C:\Users\huuuy\Desktop\GITHUB\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\obj\Debug\Xuất Danh Sách Sản Phẩm Chuyển Hàng.exe
 C:\Users\huuuy\Desktop\GITHUB\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\obj\Debug\Xuất Danh Sách Sản Phẩm Chuyển Hàng.pdb
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\bin\Debug\Xuất Danh Sách Sản Phẩm Chuyển Hàng.exe.config
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\bin\Debug\Xuất Danh Sách Sản Phẩm Chuyển Hàng.exe
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\bin\Debug\Xuất Danh Sách Sản Phẩm Chuyển Hàng.pdb
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\bin\Debug\ExcelDataReader.dll
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\bin\Debug\ExcelDataReader.pdb
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\bin\Debug\ExcelDataReader.xml
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\obj\Debug\Xuất Danh Sách Sản Phẩm Chuyển Hàng.csproj.AssemblyReference.cache
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\obj\Debug\Xuất_Danh_Sách_Sản_Phẩm_Chuyển_Hàng.Form1.resources
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\obj\Debug\Xuất_Danh_Sách_Sản_Phẩm_Chuyển_Hàng.Properties.Resources.resources
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\obj\Debug\Xuất Danh Sách Sản Phẩm Chuyển Hàng.csproj.GenerateResource.cache
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\obj\Debug\Xuất Danh Sách Sản Phẩm Chuyển Hàng.csproj.CoreCompileInputs.cache
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\obj\Debug\Xuất Danh Sách Sản Phẩm Chuyển Hàng.csproj.CopyComplete
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\obj\Debug\Xuất Danh Sách Sản Phẩm Chuyển Hàng.exe
+C:\Users\huuuy\Desktop\ANASA\CODE CU\Xuất Danh Sách Sản Phẩm Chuyển Hàng\Xuất Danh Sách Sản Phẩm Chuyển Hàng\obj\Debug\Xuất Danh Sách Sản Phẩm Chuyển Hàng.pdb

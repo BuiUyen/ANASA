@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using DevComponents.DotNetBar;
@@ -16,8 +17,10 @@ using ExcelDataReader;
 using Medibox.Database;
 using Medibox.Model;
 using Medibox.Presenter;
+using Newtonsoft.Json;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 using Sanita.Utility;
 using Sanita.Utility.ExtendedThread;
 using Sanita.Utility.UI;
@@ -39,6 +42,27 @@ namespace Medibox
         private FormProgress mProgress = new FormProgress();
         private ExBackgroundWorker mThread;
         private IList<Checker> mListChecker = new List<Checker>();
+
+        public class Cookie
+        {
+            public string domain { get; set; }
+            public double expirationDate { get; set; }
+            public bool hostOnly { get; set; }
+            public bool httpOnly { get; set; }
+            public string name { get; set; }
+            public string path { get; set; }
+            public string sameSite { get; set; }
+            public bool secure { get; set; }
+            public bool session { get; set; }
+            public string storeId { get; set; }
+            public string value { get; set; }
+        }
+
+        public class Root
+        {
+            public string url { get; set; }
+            public List<Cookie> cookies { get; set; }
+        }
 
 
         private enum ProcessingType
@@ -346,41 +370,140 @@ namespace Medibox
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            // Đường dẫn tới thư mục chứa profile của Chrome
-            string userProfile = @"C:\Users\huuuy\AppData\Local\Google\Chrome\User Data";
+            //// Đường dẫn tới thư mục chứa profile của Chrome
+            //string userProfile = @"C:\Users\huuuy\AppData\Local\Google\Chrome\User Data";
 
-            // Tên của profile bạn muốn sử dụng
-            //string profileName = "Default"; 
-            string profileName = "Profile 2";
+            //// Tên của profile bạn muốn sử dụng
+            ////string profileName = "Default"; 
+            //string profileName = "Profile 2";
 
-            // Cấu hình ChromeOptions để sử dụng profile đã lưu
-            var options = new ChromeOptions();
-            options.AddArgument($"--user-data-dir={userProfile}");
-            options.AddArgument($"--profile-directory={profileName}");
+            //// Cấu hình ChromeOptions để sử dụng profile đã lưu
+            //var options = new ChromeOptions();
+            //options.AddArgument($"--user-data-dir={userProfile}");
+            //options.AddArgument($"--profile-directory={profileName}");
 
-            // Thay đổi User-Agent
-            options.AddArgument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36");
+            //// Thay đổi User-Agent
+            //options.AddArgument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36");
 
-            // Thêm các cờ tùy chọn để tránh bị phát hiện
-            options.AddArgument("--disable-blink-features=AutomationControlled");
-            options.AddArgument("--no-sandbox");
-            options.AddArgument("--disable-dev-shm-usage");
+            //// Thêm các cờ tùy chọn để tránh bị phát hiện
+            //options.AddArgument("--disable-blink-features=AutomationControlled");
+            //options.AddArgument("--no-sandbox");
+            //options.AddArgument("--disable-dev-shm-usage");
 
-            // Khởi động Chrome với cấu hình đã thiết lập
-            IWebDriver driver = new ChromeDriver(options);
+            //// Khởi động Chrome với cấu hình đã thiết lập
+            //IWebDriver driver = new ChromeDriver(options);
+            
 
-            // Ẩn thuộc tính webdriver
-            ((IJavaScriptExecutor)driver).ExecuteScript("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})");
+            //// Ẩn thuộc tính webdriver
+            //((IJavaScriptExecutor)driver).ExecuteScript("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})");
 
-            // Mở trang web bất kỳ
-            driver.Navigate().GoToUrl("https://www.google.com");
+            //// Mở trang web bất kỳ
+            //driver.Navigate().GoToUrl("https://www.google.com");
 
-            // Giữ trình duyệt mở để bạn có thể xem kết quả
-            //Console.WriteLine("Press any key to close the browser...");
-            //Console.ReadKey();
+            //// Giữ trình duyệt mở để bạn có thể xem kết quả
+            //MessageBox.Show("Press any key to close the browser...");
+            ////Console.ReadKey();
+
+            //// Đóng trình duyệt
+            //driver.Quit();
+
+
+
+
+            //// Đường dẫn đến driver Chrome
+            //var options = new ChromeOptions();
+            ////options.AddArgument("--start-maximized"); // Mở trình duyệt tối đa màn hình
+
+            //IWebDriver driver = new ChromeDriver(options);
+
+            ////try
+            //{
+            //    // URL của trang web cần truy cập
+            //    string _url = "https://anasa.mysapogo.com/admin/dashboard";
+
+            //    // Mở trang web để gán cookie
+            //    driver.Navigate().GoToUrl(_url);
+
+            //    var datalist = new Root();
+            //    using (StreamReader r = new StreamReader("C:\\Users\\huuuy\\Downloads\\anasa3.json"))
+            //    {
+            //        string json = r.ReadToEnd();
+            //        datalist = JsonConvert.DeserializeObject<Root>(json);
+            //    }
+
+
+            //    // Danh sách cookie đã sao chép (thay bằng cookie của bạn)
+            //    var cookies = new List<Dictionary<string, string>>();
+
+            //    foreach(Cookie coki in datalist.cookies)
+            //    {
+            //        //if(coki.domain == "anasa.mysapogo.com")
+            //        cookies.Add(new Dictionary<string, string> { { "name", coki.name }, { "value", coki.value }, { "domain", coki.domain } });
+            //    }
+
+            //    // Thêm cookie vào trình duyệt
+            //    foreach (var cookie in cookies)
+            //    {
+            //        driver.Manage().Cookies.AddCookie(new OpenQA.Selenium.Cookie(
+            //            cookie["name"],
+            //            cookie["value"],
+            //            cookie.ContainsKey("anasa.mysapogo.com") ? cookie["domain"] : null,
+            //            "/",
+            //            null
+            //        ));
+            //    }
+
+            //    // Refresh trang để sử dụng cookie
+            //    driver.Navigate().GoToUrl(_url);
+
+            //    // Sau khi load xong, bạn đã đăng nhập thành công nếu cookie hợp lệ
+            //    MessageBox.Show("Đăng nhập thành công!");
+            //}
+            ////catch (Exception ex)
+            ////{
+            ////    MessageBox.Show($"Có lỗi xảy ra: {ex.Message}");
+            ////}
+            ////finally
+            ////{
+            ////    // Kết thúc chương trình
+            ////    driver.Quit();
+            ////}
+
+
+            // Đường dẫn đến profile đã lưu
+            string profilePath = @"C:\Users\huuuy\AppData\Roaming\Mozilla\Firefox\Profiles\7rwzke01.default";
+
+            // Tạo đối tượng Firefox Profile
+            FirefoxProfile profile = new FirefoxProfile(profilePath);
+
+            // Tạo đối tượng Firefox Options và gắn profile
+            FirefoxOptions options = new FirefoxOptions
+            {
+                Profile = profile               
+
+            };
+            string firefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
+            options.BrowserExecutableLocation = firefoxBinaryPath;
+
+
+            // Khởi chạy trình duyệt với profile đã lưu
+            FirefoxDriver driver = new FirefoxDriver(options);      
+            
+
+
+         
+
+
+
+            // Điều hướng đến trang web
+            driver.Navigate().GoToUrl("https://anasa.mysapogo.com/admin/dashboard");
+
+            // Giữ trình duyệt để kiểm tra
+            MessageBox.Show("Press Enter to close the browser...");            
 
             // Đóng trình duyệt
-            //driver.Quit();
+            driver.Quit();
+
 
         }
     }

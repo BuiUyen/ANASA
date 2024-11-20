@@ -209,8 +209,8 @@ namespace Medibox
                 var driverService = ChromeDriverService.CreateDefaultService();
                 driverService.HideCommandPromptWindow = true;
                 var options = new ChromeOptions();
-                options.AddArgument("--window-position=-32000,-32000"); //an chorme
-                options.AddArgument("headless");
+                //options.AddArgument("--window-position=-32000,-32000"); //an chorme
+                //options.AddArgument("headless");
 
                 driver = new ChromeDriver(driverService, options);
                 driver.Navigate().GoToUrl("https://macthiyen.mysapogo.com/");
@@ -227,6 +227,7 @@ namespace Medibox
                     stt = i;
                     driver.Navigate().GoToUrl("https://macthiyen.mysapogo.com/admin/products.json?page=" + i.ToString());
                     var todo = driver.FindElement(By.TagName("Body")).Text;
+                    
                     Root _root = JsonConvert.DeserializeObject<Root>(todo);
 
                     if (_root.products.Count == 0)
