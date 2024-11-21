@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AForge.Video;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
-using Emgu.CV;
-using Emgu.CV.CvEnum;
-using Emgu.CV.Structure;
 using ZXing;
 
 namespace SCAN_QR_CAMERA
@@ -19,7 +15,7 @@ namespace SCAN_QR_CAMERA
     public partial class Form1 : Form
     {
 
-        private VideoCapture _capture;
+        MJPEGStream stream;
         private Timer _timer;
 
 
@@ -33,43 +29,44 @@ namespace SCAN_QR_CAMERA
         private void InitializeCamera()
         {
             // Kết nối tới luồng RTSP của camera
-            string rtspUrl = "rtsp://uyen:@Uyen23071998@192.168.1.7:554/cam/realmonitor?channel=3&subtype=0&unicast=true&proto=Onvif";
-            _capture = new VideoCapture(rtspUrl);
-            _capture.SetCaptureProperty(CapProp.Fps, 30); // Set frame rate nếu cần
-
-            _timer = new Timer();
-            _timer.Interval = 1000 / 30; // Quét mỗi frame
-            _timer.Tick += Timer_Tick;
+            string rtspUrl = "rtsp://uyen:@Uyen23071998@192.168.1.7:554/cam/realmonitor?channel=4&subtype=0&unicast=true&proto=Onvif";
+            stream = new MJPEGStream(rtspUrl);
+            stream.NewFrame += stream_NewFrame;
+            stream.Start();
+            _timer.Enabled = true;
             _timer.Start();
         }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            using (Mat frame = _capture.QueryFrame())
+            Bitmap img = (Bitmap)pic_cam.Image;
+            if (img != null)
             {
-                if (frame != null)
+                ZXing.BarcodeReader Reader = new ZXing.BarcodeReader();
+                Result result = Reader.Decode(img);
+                try
                 {
-                    // Chuyển Mat thành Bitmap
-                    Bitmap bitmap = frame.ToBitmap();
-
-                    // Giải mã QR từ hình ảnh
-                    BarcodeReader reader = new BarcodeReader();
-                    var result = reader.Decode(bitmap);
-
-                    if (result != null)
+                    string decoded = result.ToString().Trim();
+                    if (!listBox1.Items.Contains(decoded))
                     {
-                        textBox1.Text = result.Text; // Hiển thị nội dung QR code
+                        listBox1.Items.Insert(0, decoded);
                     }
 
-                    pictureBox1.Image = bitmap; // Hiển thị video từ camera
+                    img.Dispose();
                 }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message + "");
+                }
+
             }
         }
 
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        public void stream_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
-            _timer?.Stop();
-            _capture?.Dispose();
+            Bitmap bmp = (Bitmap)eventArgs.Frame.Clone();
+            pic_cam.Image = bmp;
         }
+
     }
 }
