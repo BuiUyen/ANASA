@@ -1,0 +1,21 @@
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\bin\Debug\QR SCAN.exe.config
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\bin\Debug\QR SCAN.exe
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\bin\Debug\QR SCAN.pdb
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\bin\Debug\AForge.dll
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\bin\Debug\AForge.Video.dll
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\bin\Debug\zxing.dll
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\bin\Debug\zxing.presentation.dll
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\bin\Debug\AForge.xml
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\bin\Debug\AForge.Video.xml
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\bin\Debug\zxing.xml
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\bin\Debug\zxing.presentation.xml
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\obj\Debug\QR SCAN.csproj.AssemblyReference.cache
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\obj\Debug\QR_SCAN.Form1.resources
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\obj\Debug\QR_SCAN.Properties.Resources.resources
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\obj\Debug\QR SCAN.csproj.GenerateResource.cache
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\obj\Debug\QR SCAN.csproj.CoreCompileInputs.cache
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\obj\Debug\QR SCAN.csproj.CopyComplete
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\obj\Debug\QR SCAN.exe
+C:\Users\huuuy\Desktop\ANASA\QR SCAN\QR SCAN\obj\Debug\QR SCAN.pdb
