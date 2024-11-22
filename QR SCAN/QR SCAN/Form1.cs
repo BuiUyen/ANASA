@@ -38,11 +38,12 @@ namespace QR_SCAN
             //timer1.Start();
 
             videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            videoSource = new VideoCaptureDevice(videoDevices[3].MonikerString);
+            videoSource = new VideoCaptureDevice(videoDevices[1].MonikerString);
             videoSource.NewFrame += VideoSource_NewFrame;
 
             // Bắt đầu phát luồng
             videoSource.Start();
+            timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -54,11 +55,15 @@ namespace QR_SCAN
                 Result result = Reader.Decode(img);
                 try
                 {
-                    string decoded = result.ToString().Trim();
-                    if (!listBox1.Items.Contains(decoded))
+                    if (result != null)
                     {
-                        listBox1.Items.Insert(0, decoded);
+                        string decoded = result.ToString().Trim();
+                        if (!listBox1.Items.Contains(decoded))
+                        {
+                            listBox1.Items.Insert(0, decoded);
+                        }
                     }
+
 
                     img.Dispose();
                 }
@@ -86,7 +91,7 @@ namespace QR_SCAN
             currentFrame = (Bitmap)eventArgs.Frame.Clone();
 
             // Quét mã QR
-            ScanQRCode(currentFrame);
+            //ScanQRCode(currentFrame);
         }
 
         private void ScanQRCode(Bitmap frame)
@@ -125,3 +130,5 @@ namespace QR_SCAN
         }
     }
 }
+
+
