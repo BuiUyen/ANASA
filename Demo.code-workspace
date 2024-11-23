@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "E:/Python/Demo"
+		},
+		{
+			"name": "ESP8266_MQTT",
+			"path": "../../Documents/PlatformIO/Projects/ESP8266_MQTT"
+		},
+		{
+			"name": "ESP32_Camera",
+			"path": "../../Documents/PlatformIO/Projects/ESP32_Camera"
+		}
+	],
+	"settings": {}
+}
