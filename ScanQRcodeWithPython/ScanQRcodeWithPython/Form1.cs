@@ -18,6 +18,9 @@ namespace ScanQRcodeWithPython
         private Process process;
         private StringBuilder output = new StringBuilder();
         private bool outputChanged;
+
+        string barcode = string.Empty;
+
         public Form1()
         {
             InitializeComponent();
@@ -42,7 +45,7 @@ namespace ScanQRcodeWithPython
             process.StartInfo.FileName = @"C:\Program Files\Python310\python.exe";
             process.StartInfo.CreateNoWindow = true;
             process.StartInfo.UseShellExecute = false;
-            process.StartInfo.Arguments = Application.StartupPath + @"\scanqrcode.py";
+            process.StartInfo.Arguments = Application.StartupPath + @"\importcv2.py";
             process.StartInfo.RedirectStandardOutput = true;
             process.OutputDataReceived += OnOutputDataReceived;
             process.Exited += OnProcessExited;
@@ -54,7 +57,7 @@ namespace ScanQRcodeWithPython
         {
             lock (syncGate)
             {
-                if (sender != process) return;
+                if (sender != process) return;                
                 output.AppendLine(e.Data);                
                 if (outputChanged) return;
                 outputChanged = true;
@@ -65,9 +68,16 @@ namespace ScanQRcodeWithPython
         private void OnOutputChanged()
         {
             lock (syncGate)
-            {               
-                richTextBox1.Text = output.ToString();              
-                outputChanged = false;
+            {
+                var lisstringoutput = output.ToString().Split('\n');
+                string qr = lisstringoutput[lisstringoutput.Length-2];
+
+                if (barcode != qr)
+                {
+                    richTextBox1.Text = output.ToString();
+                    outputChanged = false;
+                    barcode = qr;
+                }
             }
         }
 
