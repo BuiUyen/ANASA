@@ -1,0 +1,13 @@
+C:\Users\huuuy\Desktop\ANASA\May cham cong\May cham cong\obj\Debug\May cham cong.csproj.AssemblyReference.cache
+C:\Users\huuuy\Desktop\ANASA\May cham cong\May cham cong\obj\Debug\Interop.zkemkeeper.dll
+C:\Users\huuuy\Desktop\ANASA\May cham cong\May cham cong\obj\Debug\May cham cong.csproj.ResolveComReference.cache
+C:\Users\huuuy\Desktop\ANASA\May cham cong\May cham cong\obj\Debug\May_cham_cong.Properties.Resources.resources
+C:\Users\huuuy\Desktop\ANASA\May cham cong\May cham cong\obj\Debug\May cham cong.csproj.GenerateResource.cache
+C:\Users\huuuy\Desktop\ANASA\May cham cong\May cham cong\obj\Debug\May cham cong.csproj.CoreCompileInputs.cache
+C:\Users\huuuy\Desktop\ANASA\May cham cong\May cham cong\bin\Debug\May cham cong.exe.config
+C:\Users\huuuy\Desktop\ANASA\May cham cong\May cham cong\bin\Debug\May cham cong.exe
+C:\Users\huuuy\Desktop\ANASA\May cham cong\May cham cong\bin\Debug\May cham cong.pdb
+C:\Users\huuuy\Desktop\ANASA\May cham cong\May cham cong\obj\Debug\May cham cong.exe
+C:\Users\huuuy\Desktop\ANASA\May cham cong\May cham cong\obj\Debug\May cham cong.pdb
+C:\Users\huuuy\Desktop\ANASA\May cham cong\May cham cong\obj\Debug\AttendanceManager.Form1.resources
+C:\Users\huuuy\Desktop\ANASA\May cham cong\May cham cong\bin\Debug\Interop.zkemkeeper.dll
